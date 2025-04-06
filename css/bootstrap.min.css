@@ -55,7 +55,7 @@
     }
     blockquote,
     pre {
-        border: 1px solid #999;
+        border: 1px solid #258aa7;
         page-break-inside: avoid
     }
     thead {
@@ -309,7 +309,7 @@ table {
 caption {
     padding-top: .75rem;
     padding-bottom: .75rem;
-    color: #868e96;
+    color: #258aa7;
     text-align: left;
     caption-side: bottom
 }

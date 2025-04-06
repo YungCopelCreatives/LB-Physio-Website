@@ -570,7 +570,7 @@ textarea {
 	margin-top:150px;
 }
 .slider .single-slider h1 {
-	color: #2C2D3F;
+	color: #258aa7;
 	font-size: 38px;
 	font-weight: 700;
 	margin: 0;
@@ -581,7 +581,7 @@ textarea {
 	color:#258aa7;
 }
 .slider .single-slider p {
-	color: #2C2D3F;
+	color: #258aa7;
 	margin-top: 27px;
 	font-weight: 400;
 }
@@ -589,8 +589,8 @@ textarea {
 	margin-top:30px;
 }
 .slider .single-slider .btn{
-	color:#fff;
-	background:#1a76d1;
+	color:#ffffff;
+	background:#767676;
 	font-weight:500;
 	display:inline-block;
 	margin:0;
@@ -600,11 +600,11 @@ textarea {
 	margin:0;
 }
 .slider .single-slider .btn.primary{
-	background:#2C2D3F;
-	color:#fff;
+	background:#767676;
+	color:#ffffff;
 }
 .slider .single-slider .btn.primary:before{
-	background:#1A76D1;
+	background:#258aa7;
 }
 .slider .owl-carousel .owl-nav {
 	margin: 0;
@@ -618,7 +618,7 @@ textarea {
 	width: 50px;
 	line-height: 50px;
 	text-align: center;
-	background: #1A76D1;
+	background: #258aa7;
 	color: #fff;
 	font-size: 26px;
 	position: absolute;
@@ -630,7 +630,7 @@ textarea {
 	border-radius: 50%;
 }
 .slider .owl-carousel .owl-nav div:hover{
-	background:#2C2D3F;
+	background:#2a4a53;
 	color:#fff;
 }
 .slider .owl-carousel .owl-controls .owl-nav .owl-prev{
@@ -673,7 +673,7 @@ textarea {
 	text-align: left;
 	z-index:3;
 	border-radius:5px;
-	background:#1A76D1;
+	background:#258aa7;
 	 -webkit-transition: all .3s ease-out 0s;
     -moz-transition: all .3s ease-out 0s;
     -ms-transition: all .3s ease-out 0s;
@@ -696,7 +696,7 @@ textarea {
     margin: 0 auto;
     width: 80%;
     height: 90%;
-    background:#1A76D1;
+    background:#258aa7;
     opacity: 0;
     filter: blur(10px);
     -webkit-transition: all .3s ease-out 0s;
@@ -1612,7 +1612,7 @@ textarea {
 .pricing-table .single-table .amount {
 	font-size:36px;
 	font-weight:600;
-	color:#1a76d1;
+	color:#258aa7;
 }
 .pricing-table .single-table .amount span{
 	display:inline-block;
@@ -2003,7 +2003,7 @@ textarea {
 	bottom:0;
 	height:2px;
 	width:0%;
-	background:#1A76D1;
+	background:#258aa7;
 	opacity:0;
 	visibility:hidden;
 	-webkit-transition:all 0.4s ease;
@@ -2081,7 +2081,7 @@ textarea {
 	bottom: -1px;
 	height: 100%;
 	width: 3px;
-	background: #1A76D1;
+	background: #258aa7;
 }
 .main-sidebar .single-widget:last-child{
 	margin:0;
@@ -2930,7 +2930,7 @@ textarea {
 	top: 5px;
 	width: 15px;
 	height: 15px;
-	border: 1px solid #1A76D1;
+	border: 1px solid #258aa7;
 	border-radius: 100%;
 }
 .login .login-form .checkbox label::after {
@@ -2948,7 +2948,7 @@ textarea {
 	transition: all 0.4s ease;
 	display: block;
 	font-size: 9px;
-	background: #1A76D1;
+	background: #258aa7;
 	border-radius: 100%;
 }
 .login .login-form .checkbox label.checked::after{
@@ -2964,7 +2964,7 @@ textarea {
 	font-weight:400;
 }
 .login .login-form .lost-pass:hover{
-	color:#1A76D1;
+	color:#258aa7;
 }
 /*====================
    End Login CSS
@@ -3007,7 +3007,7 @@ textarea {
 	bottom:0;
 	height:2px;
 	width:50px;
-	background:#1A76D1;
+	background:#258aa7;
 }
 .register .register-form p {
 	font-size: 14px;
@@ -3019,7 +3019,7 @@ textarea {
 .register .register-form p a{
 	display:inline-block;
 	margin-left:5px;
-	color:#1A76D1;
+	color:#258aa7;
 }
 .register .register-form p a:hover{
 	color:#2C2D3F;
@@ -3055,7 +3055,7 @@ textarea {
 	width:100%;
 }
 .register .form .btn:hover{
-	background:#1A76D1;
+	background:#258aa7;
 	color:#fff;
 }
 .register .register-form .checkbox {
@@ -3085,7 +3085,7 @@ textarea {
 	top: 5px;
 	width: 15px;
 	height: 15px;
-	border: 1px solid #1A76D1;
+	border: 1px solid #258aa7;
 	border-radius: 100%;
 }
 .register .register-form .checkbox label::after {
@@ -3103,7 +3103,7 @@ textarea {
 	transition: all 0.4s ease;
 	display: block;
 	font-size: 9px;
-	background: #1A76D1;
+	background: #258aa7;
 	border-radius: 100%;
 }
 .register .register-form .checkbox label.checked::after{
@@ -3114,7 +3114,7 @@ textarea {
 .register .register-form  .terms{
 	display:inline-block;
 	margin-left:5px;
-	color:#1A76D1;
+	color:#258aa7;
 }
 .register .register-form .terms:hover{
 	color:#2C2D3F;
@@ -3162,7 +3162,7 @@ textarea {
 }
 .accordion a:hover {
   color:#fff !important;
-  background:#1A76D1 !important;
+  background:#258aa7 !important;
 }
 .accordion a:after {
   position: absolute;
@@ -3189,8 +3189,8 @@ textarea {
 }
 .accordion li a.active {
   color: #ffffff;
-  background-color: #1A76D1;
-  border: 1px solid #1A76D1;
+  background-color: #258aa7;
+  border: 1px solid #258aa7;
 }
 .accordion li a.active:after {
   content: "-";
@@ -4135,6 +4135,64 @@ textarea {
 	display:inline-block;
 	margin-left:4px;
 }
+
+
+/* Add this CSS to your existing styles */
+
+/* Adjust logo size */
+.header .logo img {
+    max-height: 50px; /* Adjust the height as needed */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* Align logo and nav links */
+.header .header-inner {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .header .logo {
+        margin-right: auto; /* Push the logo to the left */
+    }
+    .header .mobile-nav {
+        display: flex; /* Ensure the mobile nav is displayed */
+        align-items: right; /* Center the burger icon vertically */
+    }
+}
 /*=========================
 	End Footer CSS
 ===========================*/
+
+/* Add this CSS to your existing styles */
+
+/* Align mobile nav to the right */
+.header .header-inner {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav */
+    align-items: center; /* Center items vertically */
+}
+
+.header .mobile-nav {
+    display: flex;
+    justify-content: flex-end; /* Aligns the burger icon to the right */
+    align-items: center; /* Center the burger icon vertically */
+    margin-left: auto; /* Pushes the mobile nav to the right */
+}
+
+/* Ensure the burger icon is visible and styled */
+.header .mobile-nav .navbar-toggler {
+    border: none; /* Remove border if any */
+    background: transparent; /* Make background transparent */
+}
+
+/* Additional styles for mobile responsiveness */
+@media (max-width: 768px) {
+    .header .logo {
+        margin-right: auto; /* Push the logo to the left */
+    }
+    .header .main-menu {
+        display: none; /* Hide the main menu on mobile */
+    }
+}
