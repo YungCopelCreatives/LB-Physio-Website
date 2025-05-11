@@ -21,11 +21,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- icofont CSS -->
     <link rel="stylesheet" href="css/icofont.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body>
 
@@ -103,7 +105,26 @@
         <!--/ End Header Inner -->
     </header>
     <!-- End Header Area -->
-
+  
+    
+    <!-- Hero Section -->
+    <div class="breadcrumbs overlay">
+        <div class="container">
+            <div class="bread-inner">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>About Me</h2>
+                        <ul class="bread-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="icofont-simple-right"></i></li>
+                            <li class="active">My Story</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- Start About Section -->
     <section class="about section">
         <div class="container">
@@ -131,13 +152,96 @@
                 </div>
                 <div class="col-lg-6 col-12">
                     <div class="about-image">
-                        <img src="img/about-image.jpeg" alt="About Luyanda Buthelezi" class="img-fluid">
+                        <img src="img/1777.jpeg" alt="About Luyanda Buthelezi" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- End About Section -->
+
+
+    <div class="container-fluid cta-section py-6 bg-light">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center px-4">
+                <br>
+    <br>
+   
+                <h2 class="mb-4" style="color: #1A4D80;">
+                    Ready to break through the <span style="color: #258aa7;">pain barriers</span> holding you back? 
+                    Your journey to <span style="color: #258aa7;">full recovery</span> starts here.
+                </h2>
+                <p class="lead mb-5" style="color: #258aa7; font-size: 1.25rem;">
+                    Take the first step toward regaining your strength and mobility today!
+                </p>
+                <a href="contact.html" class="btn btn-cta px-5 py-3" 
+                   style="background: #258aa7; 
+                          border: none;
+                          color: #f3f5f5;
+                          font-weight: 600;
+                          border-radius: 25px;
+                          transition: all 0.3s ease;">
+                    Start Your Recovery Journey
+                </a>
+                <br>
+                 <br>
+                 <br>
+            </div>
+        </div>
+    </div>
+    
+     <!-- Core Values Section -->
+    <br>
+    <br>
+        <div class="container">
+            <h2 class="text-center mb-5" style="color: #258aa7;">Our Core Values</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card text-center">
+                        <i class="icofont-heart-alt value-icon"></i>
+                        <h4>Compassionate Care</h4>
+                        <p>Treating every patient with empathy and understanding</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card text-center">
+                        <i class="material-icons" style="font-size: 48px; color: #258aa7;">handshake</i>
+                        <h4>Integrity</h4>
+                        <p>Consistent honesty in all our interactions</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card text-center">
+                        <i class="icofont-transparent value-icon"></i>
+                        <h4>Transparency</h4>
+                        <p>Clear communication in every treatment plan</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card text-center">
+                        <i class="icofont-users value-icon"></i>
+                        <h4>Personalized Approach</h4>
+                        <p>Tailored treatments for individual needs</p>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4">
+                    <div class="value-card text-center">
+                        <i class="icofont-badge value-icon"></i>
+                        <h4>Professional Excellence</h4>
+                        <p>Highest standards of clinical practice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <br>
+        <br>
+        <br>
+        <br>
 
     <!-- Footer Area -->
     <footer id="footer" class="footer">
@@ -171,9 +275,9 @@
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-12">
                                     <ul>
-                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
-                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
-                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Blog</a></li>
+                                        <li><a href="portfolio-details.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Gallery</a></li>
+                                        <li><a href="FAQ.html"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+                                        <li><a href="contact.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -220,6 +324,45 @@
         <!--/ End Copyright -->
     </footer>
     <!--/ End Footer Area -->
+
+
+    <style>
+  
+    
+        .core-values {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+        
+        .value-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 15px;
+            transition: all 0.3s ease;
+            border-bottom: 4px solid #258aa7;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: #258aa7;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+            .display-3 {
+                font-size: 2.5rem;
+            }
+        }
+        </style>
 
     <!-- jquery Min JS -->
     <script src="js/jquery.min.js"></script>

@@ -1,235 +1,351 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en-ZA" dir="ltr">
 <head>
-    <!-- Meta Tags -->
+    <!-- Enhanced Meta Tags -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="Physiotherapy, Appointment, Rehabilitation, Johannesburg">
-    <meta name="description" content="Book an appointment at Luyanda Buthelezi Physiotherapy for expert care.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Physiotherapy Johannesburg, Book Physio Online, Rehabilitation Services, Sports Injury Recovery">
+    <meta name="description" content="Book your physiotherapy appointment online with Luyanda Buthelezi, expert in rehabilitation and pain management in Johannesburg.">
+    <meta name="author" content="Luyanda Buthelezi Physiotherapy">
+    <meta name="geo.region" content="ZA-GP">
+    <meta name="geo.placename" content="Johannesburg">
     
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Luyanda Buthelezi Physiotherapy",
+        "image": "img/logo.png",
+        "url": "https://www.yourclinic.com",
+        "telephone": "+27 (0)73 948 0811",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Your Street Address",
+            "addressLocality": "Johannesburg",
+            "postalCode": "2000",
+            "addressCountry": "ZA"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+            "opens": "08:00",
+            "closes": "17:00"
+        },
+        "sameAs": [
+            "https://facebook.com/yourpage",
+            "https://twitter.com/yourprofile"
+        ]
+    }
+    </script>
+
     <!-- Title -->
-    <title>Book an Appointment - Luyanda Buthelezi Physiotherapy</title>
+    <title>Book Physiotherapy Appointment | Luyanda Buthelezi Johannesburg</title>
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Favicon -->
-    <link rel="icon" href="img/favicon.png">
+    <link rel="icon" href="img/favicon.png" type="image/png">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <!-- icofont CSS -->
-    <link rel="stylesheet" href="css/icofont.css">
-    <!-- Main CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <style>
+        :root {
+            --primary-color: #2A9D8F;
+            --secondary-color: #264653;
+            --accent-color: #E9C46A;
+            --text-dark: #2B2D42;
+            --text-light: #8D99AE;
+        }
+
+        /* Appointment Section Styles */
+        .appointment {
+            padding: 4rem 0;
+            background: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)), url('img/texture-bg.jpg') center/cover;
+        }
+
+        .appointment-form {
+            max-width: 700px;
+            margin: 2rem auto;
+            padding: 2.5rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            color: var(--text-dark);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 8px rgba(42,157,143,0.2);
+            outline: none;
+        }
+
+        select {
+            appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%232a9d8f" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 1rem center/15px;
+        }
+
+        .btn-submit {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            width: 100%;
+            font-size: 1.1rem;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(42,157,143,0.3);
+        }
+
+        /* Enhanced Header Styles */
+        .header {
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .topbar {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 0;
+        }
+
+        .top-link a {
+            color: rgba(255,255,255,0.8);
+            transition: color 0.3s ease;
+        }
+
+        .top-link a:hover {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* Modern Footer */
+        #footer {
+            background: var(--secondary-color);
+            color: white;
+            margin-top: 4rem;
+        }
+
+        .single-footer h2 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .social li {
+            display: inline-block;
+            margin-right: 0.8rem;
+        }
+
+        .social a {
+            color: white;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social a:hover {
+            color: var(--accent-color);
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+            <div class="indicator"> 
+                <svg width="16px" height="12px">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Area -->
     <header class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-12">
-                    <div class="logo">
-                        <a href="index.html"><img src="img/logo.png" alt="#"></a>
-                    </div>
-                </div>
-                <div class="col-lg-9 col-md-9 col-12">
-                    <nav class="navigation">
-                        <ul class="nav menu">
-                            <li><a href="index.html">Home</a></li>
+        <!-- Topbar -->
+        <div class="topbar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-5 col-12">
+                        <ul class="top-link">
                             <li><a href="about.html">About</a></li>
                             <li><a href="services.html">Services</a></li>
-                            <li><a href="portfolio-details.html">Gallery</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="FAQ.html">FAQ</a></li>
                         </ul>
-                    </nav>
+                    </div>
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <ul class="top-contact">
+                            <li><i class="fa fa-phone"></i>+27 (0)73 948 0811</li>
+                            <li><i class="fa fa-envelope"></i><a href="mailto:luyandabschemes@gmail.com">luyandabschemes@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header Inner -->
+        <div class="header-inner">
+            <div class="container">
+                <div class="inner">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-12">
+                            <div class="logo">
+                                <a href="index.html"><img src="img/logo.png" alt="Luyanda Buthelezi Physiotherapy"></a>
+                            </div>
+                            <div class="mobile-nav">
+                                <button class="navbar-toggler" type="button" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-12">
+                            <div class="main-menu">
+                                <nav class="navigation">
+                                    <ul class="nav menu">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="services.html">Services</a></li>
+                                        <li class="active"><a href="appointment.html">Book Appointment</a></li>
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <!-- End Header Area -->
 
-    <!-- Start Appointment Section -->
-    <section class="appointment" style="background-image: url('img/appointment-bg.jpg'); background-size: cover; padding: 100px 0;">
+    <!-- Appointment Section -->
+    <section class="appointment">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title text-center">
-                        <h2>Book An Appointment</h2>
-                        <p>We are here to assist you with your physiotherapy needs. Please fill out the form below to schedule your appointment.</p>
+            <div class="section-heading text-center mb-5">
+                <h1 class="mb-3">Schedule Your Consultation</h1>
+                <p class="lead text-muted">Begin your journey to recovery - Select your preferred service and time</p>
+            </div>
+            
+            <form action="mail/mail.php" method="post" class="appointment-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Full Name*" required aria-label="Full Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email Address*" required aria-label="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone Number*" required aria-label="Phone Number">
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-12 col-12 mx-auto">
-                    <form class="form" action="#">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="form-group">
-                                    <input name="name" type="text" placeholder="Your Name" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="form-group">
-                                    <input name="email" type="email" placeholder="Your Email" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="form-group">
-                                    <input name="phone" type="text" placeholder="Your Phone Number" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="form-group">
-                                    <div class="nice-select form-control wide" tabindex="0">
-                                        <span class="current">Select Service</span>
-                                        <ul class="list">
-                                            <li data-value="1" class="option selected">Select Department</li>
-                                            <li data-value="2" class="option">Physiotherapy</li>
-                                            <li data-value="3" class="option">Rehabilitation</li>
-                                            <li data-value="4" class="option">Sports Medicine</li>
-                                            <li data-value="5" class="option">Chronic Pain Management</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-12">
-                                <div class="form-group">
-                                    <input type="text" placeholder="Preferred Date" id="datepicker" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-12">
-                                <div class="form-group">
-                                    <textarea name="message" placeholder="Additional Information (optional)"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-5 col-md-4 col-12">
-                                <div class="form-group">
-                                    <div class="button">
-                                        <button type="submit" class="btn">Book An Appointment</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-7 col-md-8 col-12">
-                                <p>We will confirm your appointment via text message.</p>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="appointment-image">
-                        <img src="img/contact-img.png" alt="#">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <select name="service" id="service" required aria-label="Select Service">
+                            <option value="" disabled selected>Select Treatment Type</option>
+                            <option value="Pediatric Physiotherapy">Pediatric Care</option>
+                            <option value="Sports Injury Rehabilitation">Sports Injury Recovery</option>
+                            <option value="Post-Operative Rehabilitation">Post-Surgery Rehab</option>
+                            <option value="Chronic Pain Management">Pain Management</option>
+                            <option value="Chronic Pain Management">Hip, Knee & Shoulder Replacements</option>
+                            <option value="Chronic Pain Management">Headache Management</option>
+                            <option value="Post-Operative Rehabilitation">Post-Surgery Rehab</option>
+                            <option value="Chronic Pain Management">Chronic Back & Neck Pain</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="datepicker" name="date" placeholder="Preferred Date*" required aria-label="Appointment Date">
                     </div>
                 </div>
-            </div>
+
+                <div class="form-group">
+                    <textarea name="message" rows="5" placeholder="Tell us about your specific needs*" required aria-label="Message"></textarea>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn-submit">
+                        Request Appointment <i class="fa fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </form>
         </div>
     </section>
-    <!-- End Appointment Section -->
 
-    <!-- Footer Area -->
-    <footer id="footer" class="footer">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="single-footer">
-                            <h2>About Us</h2>
-                            <p>Luyanda Buthelezi Physiotherapy is dedicated to providing expert rehabilitation and holistic care to enhance your health and well-being.</p>
-                            <ul class="social">
-                                <li><a href="#"><i class="icofont-facebook"></i></a></li>
-                                <li><a href="#"><i class="icofont-google-plus"></i></a></li>
-                                <li><a href="#"><i class="icofont-twitter"></i></a></li>
-                                <li><a href="#"><i class="icofont-vimeo"></i></a></li>
-                                <li><a href="#"><i class="icofont-pinterest"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="single-footer f-link">
-                            <h2>Quick Links</h2>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
-                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
-                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Testimonials</a></li>
-                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
-                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Blog</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="single-footer">
-                            <h2>Open Hours</h2>
-                            <p>We are here to assist you with your physiotherapy needs.</p>
-                            <ul class="time-sidual">
-                                <li class="day">Monday - Friday <span>8:00 AM - 8:00 PM</span></li>
-                                <li class="day">Saturday <span>9:00 AM - 6:30 PM</span></li>
-                                <li class="day">Sunday <span>Closed</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                        <div class="single-footer">
-                            <h2>Newsletter</h2>
-                            <p>Subscribe to our newsletter to receive the latest updates and news from Luyanda Buthelezi Physiotherapy.</p>
-                            <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-                                <input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
-                                    onblur="this.placeholder = 'Your email address'" required="" type="email">
-                                <button class="button" title="Send Email"><i class="icofont icofont-paper-plane"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ End Footer Top -->
         <!-- Copyright -->
         <div class="copyright">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12 col-md-12 col-12">
-                        <div class="copyright-content">
-                            <p>© 2023 Luyanda Buthelezi Physiotherapy | All Rights Reserved.</p>
+                    <div class="col-12">
+                        <div class="copyright-content text-center">
+                            <p>&copy; 2025 Luyanda Buthelezi Physiotherapy. All Rights Reserved. <span class="divider">|</span> <a href="privacy.html">Privacy Policy</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--/ End Copyright -->
     </footer>
-    <!--/ End Footer Area -->
 
-    <!-- jquery Min JS -->
+    <!-- Scripts -->
     <script src="js/jquery.min.js"></script>
-    <!-- jquery Migrate JS -->
-    <script src="js/jquery-migrate-3.0.0.js"></script>
-    <!-- jquery Ui JS -->
-    <script src="js/jquery-ui.min.js"></script>
-    <!-- Easing JS -->
-    <script src="js/easing.js"></script>
-    <!-- Color JS -->
-    <script src="js/colors.js"></script>
-    <!-- Popper JS -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap JS -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- Main JS -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        // Enhanced Datepicker
+        $(function() {
+            $("#datepicker").datepicker({
+                dateFormat: "DD, MM d, yy",
+                minDate: 1,
+                beforeShowDay: $.datepicker.noWeekends,
+                showOtherMonths: true,
+                dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+                prevText: '<i class="fa fa-chevron-left"></i>',
+                nextText: '<i class="fa fa-chevron-right"></i>'
+            }).attr('readonly', 'readonly');
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.querySelector('.main-menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+            document.body.classList.toggle('menu-open');
+        }
+
+        // Preloader
+        window.addEventListener('load', function() {
+            document.querySelector('.preloader').style.display = 'none';
+        });
+    </script>
 </body>
 </html>
