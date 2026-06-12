@@ -1,0 +1,43 @@
+/* Scroll reveal & animations – no content change */
+@media (prefers-reduced-motion: reduce) {
+  .lb-reveal { transition: none !important; }
+}
+.lb-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.lb-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card hover lift */
+.service-item, .feature-box, .single-service, .single-table {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform;
+}
+.service-item:hover, .feature-box:hover, .single-service:hover, .single-table:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.1);
+}
+
+/* Navbar scroll blur */
+.header-inner {
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.header-inner.scrolled {
+  background: rgba(255,255,255,0.92) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 12px rgba(0,0,0,0.07);
+}
+
+/* Page fade-in */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+body {
+  animation: pageFadeIn 0.4s ease forwards;
+}

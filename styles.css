@@ -1,0 +1,176 @@
+/* styles.css: Styles for the Chiefs Partnership section and gallery. */
+/* Add this file to your CSS and link it (as shown above). */
+
+.chiefs-partnership {
+    padding: 120px 0;
+    background: #fafafa;
+}
+.partnership-header {
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+.partnership-tag {
+    display: inline-block;
+    background: #258aa7;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.partnership-header h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.partnership-header p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #666;
+}
+.partnership-gallery-link {
+    text-decoration: none;
+}
+.partnership-gallery-link:focus {
+    outline: 3px dashed #D4AF37;
+    outline-offset: 4px;
+}
+.partnership-grid {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.p-card {
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+}
+.p-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s cubic-bezier(.22,1,.36,1);
+}
+.p-card:hover img {
+    transform: scale(1.12);
+}
+.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.wide {
+    grid-column: span 2;
+}
+.view-gallery-btn {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+    color: #258aa7;
+    font-weight: 600;
+}
+
+.collab-intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+.collab-logo {
+    width: 260px;
+    opacity: 0;
+    animation: logoReveal 1.5s ease forwards;
+}
+.collab-intro h1 {
+    margin-top: 30px;
+    font-size: 60px;
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+    animation-delay: .5s;
+}
+.collab-intro p {
+    opacity: 0;
+    animation: fadeUp 1.2s ease forwards;
+    animation-delay: .8s;
+}
+@keyframes logoReveal {
+    0% { opacity: 0; transform: scale(0.6); }
+    100% { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.floating-gallery {
+    padding: 120px 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.float-card {
+    overflow: hidden;
+    border-radius: 25px;
+    position: relative;
+    transition: .8s;
+}
+.float-card img {
+    width: 100%;
+    display: block;
+    border-radius: 25px;
+    transition: 1s;
+}
+.float-card:hover img {
+    transform: scale(1.08);
+}
+.float-card.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.float-card.wide {
+    grid-column: span 2;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    .partnership-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .large, .wide {
+        grid-column: auto;
+        grid-row: auto;
+    }
+    .partnership-header h2 {
+        font-size: 32px;
+    }
+    .floating-gallery {
+        grid-template-columns: 1fr;
+        padding: 50px 20px;
+    }
+    .collab-intro h1 {
+        font-size: 34px;
+    }
+}
+@media (max-width: 480px) {
+    .partnership-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .p-card img, .float-card img {
+        transition-duration: 0s !important;
+        transform: none !important;
+    }
+    .collab-logo, .collab-intro h1, .collab-intro p {
+        animation: none !important;
+    }
+}
