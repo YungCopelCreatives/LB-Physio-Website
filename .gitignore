@@ -1,0 +1,25 @@
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.iml
+
+# macOS artifacts
+__MACOSX/
+._*
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local

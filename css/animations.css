@@ -1,0 +1,152 @@
+/* ============================================
+   Global Motion System — LB Physiotherapy
+   Premium Apple-Style Animations
+   ============================================ */
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .lb-reveal, .lb-fade-up, .lb-fade-left, .lb-fade-right,
+  .lb-scale-in, .lb-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ==================== SCROLL REVEAL BASE ==================== */
+.lb-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.lb-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== FADE UP ==================== */
+.lb-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.lb-fade-up.lb-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== FADE LEFT ==================== */
+.lb-fade-left {
+  opacity: 0;
+  transform: translateX(-32px);
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.lb-fade-left.lb-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ==================== FADE RIGHT ==================== */
+.lb-fade-right {
+  opacity: 0;
+  transform: translateX(32px);
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.lb-fade-right.lb-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ==================== SCALE IN ==================== */
+.lb-scale-in {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.lb-scale-in.lb-visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ==================== STAGGER CHILDREN ==================== */
+.lb-stagger > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.lb-stagger.lb-visible > *:nth-child(1) { transition-delay: 0s; }
+.lb-stagger.lb-visible > *:nth-child(2) { transition-delay: 0.08s; }
+.lb-stagger.lb-visible > *:nth-child(3) { transition-delay: 0.16s; }
+.lb-stagger.lb-visible > *:nth-child(4) { transition-delay: 0.24s; }
+.lb-stagger.lb-visible > *:nth-child(5) { transition-delay: 0.32s; }
+.lb-stagger.lb-visible > *:nth-child(6) { transition-delay: 0.40s; }
+.lb-stagger.lb-visible > *:nth-child(7) { transition-delay: 0.48s; }
+.lb-stagger.lb-visible > *:nth-child(8) { transition-delay: 0.56s; }
+.lb-stagger.lb-visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== IMAGE REVEAL ==================== */
+.lb-image-reveal {
+  clip-path: inset(0 100% 0 0);
+  transition: clip-path 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.lb-image-reveal.lb-visible {
+  clip-path: inset(0 0 0 0);
+}
+
+/* ==================== CARD HOVER LIFT ==================== */
+.service-item, .feature-box, .single-service, .single-table,
+.value-card, .service-card, .single-schedule {
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+.service-item:hover, .feature-box:hover, .single-service:hover,
+.single-table:hover, .value-card:hover, .service-card:hover,
+.single-schedule:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.10);
+}
+
+/* ==================== NAVBAR SCROLL ==================== */
+.header-inner {
+  transition: background 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1), backdrop-filter 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.header-inner.scrolled {
+  background: rgba(255,255,255,0.92) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+}
+
+/* ==================== PAGE FADE IN ==================== */
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+body {
+  animation: pageFadeIn 0.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* ==================== HERO TEXT REVEAL ==================== */
+@keyframes heroTextReveal {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ==================== PARALLAX HELPER ==================== */
+.lb-parallax {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .lb-parallax {
+    background-attachment: scroll;
+  }
+}

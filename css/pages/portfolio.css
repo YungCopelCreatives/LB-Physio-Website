@@ -1,0 +1,302 @@
+/* ============================================
+   Portfolio/Gallery Page CSS — LB Physiotherapy
+   Merged from styles.css
+   ============================================ */
+
+/* ============================================
+   Partnership Section (Phase 6)
+   ============================================ */
+.chiefs-partnership {
+  padding: 140px 0 100px;
+  background: #FAFAFA;
+}
+.partnership-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+.partnership-tag {
+  display: inline-block;
+  background: #258aa7;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.partnership-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #1D1D1F;
+  letter-spacing: -0.025em;
+}
+.partnership-subtitle {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6E6E73;
+  font-style: italic;
+}
+.partnership-header p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Hero Row — LEFT image + RIGHT text (Phase 6) */
+.partnership-hero-row {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+.partnership-hero-row .partnership-hero {
+  flex: 1.2;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.partnership-hero-row .partnership-hero:hover {
+  transform: translateY(-4px);
+}
+.partnership-hero-row .partnership-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+.partnership-text {
+  flex: 1;
+}
+.partnership-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 16px;
+}
+.partnership-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #258aa7;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 12px;
+  transition: all 0.3s ease;
+}
+.partnership-explore-link::after {
+  content: '→';
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.partnership-explore-link:hover {
+  color: #1a6f9a;
+}
+.partnership-explore-link:hover::after {
+  transform: translateX(6px);
+}
+
+/* Partnership Image Strip */
+.partnership-strip {
+  margin-top: 0;
+}
+.partnership-strip-title {
+  display: none;
+}
+.partnership-gallery-link {
+  text-decoration: none;
+}
+.partnership-gallery-link:focus {
+  outline: 3px dashed #D4AF37;
+  outline-offset: 4px;
+}
+.partnership-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.p-card {
+  overflow: hidden;
+  border-radius: 28px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.p-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+.p-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.p-card:hover img {
+  transform: scale(1.08);
+}
+.large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.wide {
+  grid-column: span 2;
+}
+.view-gallery-btn {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 20px;
+  color: #258aa7;
+  font-weight: 600;
+}
+
+/* Collab Intro */
+.collab-intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #1D1D1F;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+.collab-logo {
+  width: 260px;
+  opacity: 0;
+  animation: logoReveal 1.5s ease forwards;
+}
+.collab-intro h1 {
+  margin-top: 30px;
+  font-size: clamp(2rem, 5vw, 4rem);
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+  animation-delay: .5s;
+}
+.collab-intro p {
+  opacity: 0;
+  animation: fadeUp 1.2s ease forwards;
+  animation-delay: .8s;
+}
+@keyframes logoReveal {
+  0% { opacity: 0; transform: scale(0.6); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(50px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating Gallery */
+.floating-gallery {
+  padding: 120px 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.float-card {
+  overflow: hidden;
+  border-radius: 28px;
+  position: relative;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.float-card img {
+  width: 100%;
+  display: block;
+  border-radius: 28px;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.float-card:hover img {
+  transform: scale(1.08);
+}
+.float-card.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.float-card.wide {
+  grid-column: span 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .partnership-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .large, .wide {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .partnership-header h2 {
+    font-size: 32px;
+  }
+  .partnership-hero-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .floating-gallery {
+    grid-template-columns: 1fr;
+    padding: 50px 20px;
+  }
+  .collab-intro h1 {
+    font-size: 34px;
+  }
+}
+@media (max-width: 480px) {
+  .partnership-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .p-card img, .float-card img {
+    transition-duration: 0s !important;
+    transform: none !important;
+  }
+  .collab-logo, .collab-intro h1, .collab-intro p {
+    animation: none !important;
+  }
+}
+
+/* Client slider inline styles (moved from index.html) */
+.single-clients img {
+  filter: brightness(0) invert(1);
+  max-height: 100px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.6;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.single-clients {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  padding: 20px;
+  max-width: 200px;
+  margin: 0 auto;
+}
+.single-clients:hover img {
+  opacity: 1;
+  transform: scale(1.05);
+}
+.owl-carousel .single-clients {
+  margin: 0 15px;
+}
+@media (max-width: 768px) {
+  .single-clients img {
+    max-height: 60px;
+  }
+  .single-clients {
+    height: 100px;
+    padding: 15px;
+  }
+}

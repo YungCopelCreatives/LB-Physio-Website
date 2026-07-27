@@ -1,0 +1,29 @@
+/* ============================================
+   About Page CSS — LB Physiotherapy
+   Premium Apple-Style Design
+   ============================================ */
+
+/* About section */
+.about .about-content h3 {
+  color: #1D1D1F;
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+.about .about-content p {
+  margin-bottom: 18px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+.about .about-image img {
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+}
+
+/* About inline styles (moved from about.html) */
+.core-values {
+  padding: 80px 0;
+  background: #FAFAFA;
+}

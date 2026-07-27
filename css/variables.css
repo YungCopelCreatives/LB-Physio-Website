@@ -1,0 +1,106 @@
+/* ============================================
+   CSS Custom Properties — LB Physiotherapy
+   Premium Apple-Style Design System
+   ============================================ */
+:root {
+  /* Brand Colors */
+  --primary: #258AA7;
+  --primary-dark: #1A6F8C;
+  --primary-hover: #1e7a96;
+  --accent-cyan: #00E5FF;
+  --navy: #1A365D;
+  --navy-dark: #132844;
+
+  /* Text Colors */
+  --ink-white: #F5F5F7;
+  --ink-muted: #6E6E73;
+  --text: #555555;
+  --text-dark: #1A365D;
+  --heading: #1A365D;
+  --white: #ffffff;
+
+  /* Background Colors */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #FAFAFA;
+  --bg-tertiary: #F5F5F7;
+  --bg-light: #FAFAFA;
+  --bg-section: #FFFFFF;
+  --bg-cta: #F5F5F7;
+
+  /* Border Colors */
+  --border: rgba(0,0,0,0.06);
+  --border-specular: rgba(0,0,0,0.08);
+  --border-strong: rgba(0,0,0,0.12);
+
+  /* Shadows */
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.08);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.10);
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 16px 48px rgba(0,0,0,0.10);
+  --shadow-elevated: 0 24px 64px rgba(0,0,0,0.12);
+
+  /* Border Radius */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-card: 28px;
+  --radius-bento: 28px;
+  --radius-xl: 28px;
+  --radius-pill: 100px;
+  --radius-img: 20px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-slow: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-inertial: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+  --duration: 0.5s;
+
+  /* Typography */
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-base: 16px;
+  --font-size-md: 17px;
+  --font-size-lg: 20px;
+  --font-size-xl: 24px;
+  --font-size-2xl: 28px;
+  --font-size-3xl: 32px;
+  --font-size-4xl: 40px;
+  --font-size-5xl: 48px;
+  --font-size-hero: clamp(3rem, 6vw, 5.5rem);
+  --font-size-hero-sub: clamp(1.125rem, 2vw, 1.375rem);
+
+  /* Line Heights */
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+  --space-2xl: 64px;
+  --space-3xl: 96px;
+  --space-section: 140px;
+  --space-section-mobile: 60px;
+  --space-section-tablet: 80px;
+  --element-gap: 24px;
+
+  /* Layout */
+  --container: 1200px;
+  --container-narrow: 900px;
+  --section-padding: 140px 0;
+
+  /* Glassmorphism (Navbar) */
+  --glass-bg: rgba(255,255,255,0.72);
+  --glass-blur: blur(20px);
+  --glass-border: 1px solid rgba(0,0,0,0.06);
+  --glass-shadow: 0 8px 32px rgba(0,0,0,0.06);
+}

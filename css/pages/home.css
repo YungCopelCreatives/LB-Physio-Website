@@ -1,0 +1,369 @@
+/* ============================================
+   Home Page CSS — LB Physiotherapy
+   Premium Apple-Style Design
+   ============================================ */
+
+/* ==================== WHY CHOOSE SECTION ==================== */
+.why-choose {
+  padding: 80px 0;
+}
+.why-choose .choose-right img {
+  width: 100%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+/* ==================== PARTNERSHIP SECTION ==================== */
+.chiefs-partnership {
+  padding: 120px 0 100px;
+  background: #FAFAFA;
+}
+.partnership-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 50px;
+}
+.partnership-tag {
+  display: inline-block;
+  background: #258aa7;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.partnership-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #1D1D1F;
+  letter-spacing: -0.025em;
+}
+.partnership-subtitle {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #6E6E73;
+  font-style: italic;
+}
+
+/* Partnership Hero Row — Left text, Right logo */
+.partnership-hero-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+.partnership-hero-row .partnership-text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: left;
+}
+.partnership-hero-row .partnership-text h3 {
+  color: #1A365D;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.partnership-hero-row .partnership-text p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.partnership-hero-row .partnership-text p:last-of-type {
+  margin-bottom: 24px;
+}
+.partnership-hero-row .partnership-hero {
+  flex: 0 0 auto;
+  text-align: center;
+}
+.partnership-hero-row .partnership-hero img {
+  max-width: 180px;
+  height: auto;
+}
+.partnership-explore-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #258aa7;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.partnership-explore-link:hover {
+  color: #1a6f9a;
+}
+.partnership-explore-link::after {
+  content: '→';
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+.partnership-explore-link:hover::after {
+  transform: translateX(6px);
+}
+
+/* Partnership Image Grid */
+.partnership-strip {
+  margin-top: 0;
+}
+.partnership-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-card {
+  overflow: hidden;
+  border-radius: 28px;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.p-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+.p-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.p-card:hover img {
+  transform: scale(1.08);
+}
+.btn-cta-wrapper {
+  text-align: center;
+  margin-top: 32px;
+}
+
+/* ==================== CORE VALUES (HOME — 4 values) ==================== */
+.core-values-home {
+  padding: 80px 0;
+  background: #FAFAFA;
+}
+
+/* ==================== APPOINTMENT SECTION ==================== */
+.appointment {
+  padding: 100px 0;
+  background: #FFFFFF;
+}
+.appointment-card {
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.08);
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.appointment-card .row.no-gutters {
+  display: flex;
+}
+.appointment-card-image {
+  position: relative;
+  min-height: 480px;
+  overflow: hidden;
+}
+.appointment-card-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.appointment-card-form {
+  padding: 56px 48px;
+}
+.appointment-card-form h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #1A365D;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.appointment-card-form > p {
+  color: #6E6E73;
+  font-size: 16px;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.appointment-card-form .form-group {
+  margin-bottom: 16px;
+}
+.appointment-card-form input,
+.appointment-card-form textarea,
+.appointment-card-form select {
+  height: 52px;
+  border-radius: 20px;
+  padding: 14px 18px;
+  border: 1.5px solid rgba(0,0,0,0.12);
+  background: #FAFAFA;
+  font-size: 15px;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+}
+.appointment-card-form input:focus,
+.appointment-card-form textarea:focus,
+.appointment-card-form select:focus {
+  border-color: #258AA7;
+  box-shadow: 0 0 0 3px rgba(37, 138, 167, 0.12);
+  background: #fff;
+}
+.appointment-card-form textarea {
+  height: 120px;
+  resize: none;
+}
+.btn-appointment-submit {
+  background: #258AA7;
+  color: #fff;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  width: 100%;
+  margin-top: 8px;
+}
+.btn-appointment-submit:hover {
+  background: #1e7a96;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(37, 138, 167, 0.35);
+}
+.appointment-note {
+  color: #6E6E73;
+  font-size: 14px;
+  margin-top: 16px;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .appointment-card .row.no-gutters {
+    flex-direction: column;
+  }
+  .appointment-card-image {
+    min-height: 280px;
+    order: -1;
+  }
+  .appointment-card-form {
+    padding: 36px 28px;
+  }
+}
+
+/* ==================== FEATURES (unused but kept for compatibility) ==================== */
+.Feautes {
+  padding-top: 0;
+}
+.Feautes .single-features {
+  text-align: center;
+  position: relative;
+  padding: 10px 20px;
+}
+.Feautes .single-features::before {
+  position: absolute;
+  content: "";
+  right: -72px;
+  top: 60px;
+  width: 118px;
+  border-bottom: 2px dotted rgba(37,138,167,0.3);
+}
+.Feautes .single-features.last::before {
+  display: none;
+}
+.Feautes .single-features .signle-icon {
+  position: relative;
+}
+.Feautes .single-features .signle-icon i {
+  font-size: 48px;
+  color: #258AA7;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 0;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  text-align: center;
+  border: 1.5px solid rgba(0,0,0,0.08);
+  border-radius: 100%;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.Feautes .single-features:hover .signle-icon i {
+  background: #258AA7;
+  color: #fff;
+  border-color: transparent;
+}
+.Feautes .single-features h3 {
+  padding-top: 128px;
+  color: #1D1D1F;
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: -0.01em;
+}
+.Feautes .single-features p {
+  margin-top: 20px;
+  color: #6E6E73;
+}
+
+/* Fun Facts */
+.fun-facts {
+  position: relative;
+}
+.fun-facts.section {
+  padding: 120px 0;
+}
+.fun-facts .single-fun i {
+  position: absolute;
+  left: 0;
+  color: #fff;
+  height: 70px;
+  width: 70px;
+  line-height: 67px;
+  font-size: 28px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  border: 2px solid #fff;
+  top: 50%;
+  margin-top: -35px;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 100%;
+}
+.fun-facts .single-fun:hover i {
+  color: #258AA7;
+  background: #fff;
+  border-color: transparent;
+}
+.fun-facts .single-fun .content {
+  padding-left: 80px;
+}
+.fun-facts .single-fun span {
+  color: #fff;
+  font-weight: 600;
+  font-size: 30px;
+  position: relative;
+  display: block;
+  -webkit-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  -moz-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  margin-bottom: 8px;
+}
+.fun-facts .single-fun p {
+  color: rgba(255,255,255,0.8);
+  font-size: 15px;
+}

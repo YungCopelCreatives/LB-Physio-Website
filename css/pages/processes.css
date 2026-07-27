@@ -1,0 +1,161 @@
+/* ============================================
+   Processes Page CSS — LB Physiotherapy
+   Interactive Treatment Process
+   ============================================ */
+
+/* Desktop: Side-by-side layout */
+.process-experience {
+  padding: 100px 0;
+}
+.process-layout {
+  display: flex;
+  gap: 48px;
+  min-height: 480px;
+}
+
+/* Left: Step Navigation */
+.process-nav {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.process-nav-item {
+  padding: 20px 24px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  border: 1px solid transparent;
+  position: relative;
+}
+.process-nav-item:hover {
+  background: rgba(37,138,167,0.06);
+  border-color: rgba(37,138,167,0.1);
+}
+.process-nav-item.active {
+  background: #258AA7;
+  border-color: transparent;
+}
+.process-nav-num {
+  font-size: 13px;
+  font-weight: 700;
+  color: #258AA7;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 4px;
+}
+.process-nav-item.active .process-nav-num {
+  color: rgba(255,255,255,0.7);
+}
+.process-nav-item h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1A365D;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.process-nav-item.active h4 {
+  color: #fff;
+}
+
+/* Right: Content Panel */
+.process-panel {
+  width: 65%;
+  background: #fff;
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.process-panel-content {
+  display: none;
+}
+.process-panel-content.active {
+  display: block;
+  animation: fadeInUp 0.4s ease-out both;
+}
+.process-panel-content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1A365D;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.process-panel-content p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+.process-panel-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.process-panel-content ul li {
+  padding: 10px 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.7;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  padding-left: 24px;
+  position: relative;
+}
+.process-panel-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: #258AA7;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+/* Disclaimer */
+.process-disclaimer {
+  background: #FAFAFA;
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-top: 40px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+.process-disclaimer p {
+  color: #6E6E73;
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Mobile: Accordion */
+@media (max-width: 768px) {
+  .process-layout {
+    flex-direction: column;
+    gap: 0;
+  }
+  .process-nav {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+  }
+  .process-nav-item {
+    flex: 0 0 auto;
+    padding: 12px 18px;
+    text-align: center;
+  }
+  .process-nav-item h4 {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .process-panel {
+    width: 100%;
+    padding: 28px;
+  }
+  .process-panel-content h3 {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,12 @@
+/* ============================================
+   Services Page CSS — LB Physiotherapy
+   Premium Apple-Style Design
+   ============================================ */
+
+/* Services page uses pricing-table and single-table components from components.css */
+/* This file adds page-specific overrides */
+
+/* Services page pricing tables - consistent height */
+.pricing-table .single-table {
+  min-height: 360px;
+}

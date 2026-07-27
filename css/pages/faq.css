@@ -1,0 +1,79 @@
+/* ============================================
+   FAQ Page CSS — LB Physiotherapy
+   Premium Apple-Style Design
+   ============================================ */
+
+/* FAQ page uses accordion and faq-item components from components.css */
+/* This file adds page-specific overrides */
+
+/* FAQ section spacing */
+.faq-section {
+  padding: 100px 0;
+}
+
+/* FAQ item consistent styling */
+.faq-item {
+  margin-bottom: 16px;
+}
+
+.faq-item h5 {
+  border-radius: 16px;
+  padding: 20px 24px;
+  font-size: 17px;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  color: #1A365D;
+  font-weight: 500;
+}
+
+.faq-item h5:hover {
+  background: #258AA7;
+  color: #fff;
+  border-color: transparent;
+}
+
+.faq-answer {
+  border-radius: 0 0 16px 16px;
+  padding: 20px 24px;
+  line-height: 1.7;
+}
+
+/* FAQ CTA */
+.faq-cta {
+  text-align: center;
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.faq-cta h4 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1A365D;
+  margin-bottom: 8px;
+}
+
+.faq-cta p {
+  color: #6E6E73;
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+.faq-cta .btn-cta {
+  margin-right: 12px;
+}
+
+@media (max-width: 768px) {
+  .faq-section {
+    padding: 60px 0;
+  }
+  .faq-item h5 {
+    padding: 16px 18px;
+    font-size: 15px;
+  }
+  .faq-answer {
+    padding: 16px 18px;
+  }
+}
