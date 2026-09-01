@@ -1,17 +1,24 @@
-// scripts.js: JavaScript for floating gallery animation.
-// Include this script before </body> on both pages.
-
+// scripts.js: Smooth 60fps JavaScript for floating gallery animation.
 document.addEventListener('DOMContentLoaded', () => {
     const cards = document.querySelectorAll('.float-card');
+    if (!cards.length) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+    }
+
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        // Do nothing if user requested reduced motion
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            return;
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                const scrollY = window.scrollY;
+                cards.forEach((card, index) => {
+                    let speed = 0.02 + (index * 0.008);
+                    card.style.transform = `translateY(${scrollY * speed}px)`;
+                });
+                ticking = false;
+            });
+            ticking = true;
         }
-        cards.forEach((card, index) => {
-            // Staggered scroll transform for parallax effect
-            let speed = 0.02 + (index * 0.008);
-            card.style.transform = `translateY(${window.scrollY * speed}px)`;
-        });
-    });
+    }, { passive: true });
 });

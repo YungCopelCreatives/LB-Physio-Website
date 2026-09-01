@@ -33,31 +33,135 @@
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-/* Contact info cards — glassmorphism style */
-.contact-us .single-info {
-  min-height: 160px;
+/* Contact info cards — glassmorphism style & equal height */
+.contact-us .contact-info {
+  margin-top: 56px;
 }
-.contact-us .single-info i {
+.contact-us .contact-info .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-us .contact-info .row > div {
+  display: flex;
+  margin-bottom: 24px;
+}
+.contact-us .single-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 32px 28px;
+  min-height: 200px;
+  background: #1D1D1F;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+.contact-us .single-info:hover {
+  transform: translateY(-4px);
+  border-color: rgba(37, 138, 167, 0.4);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
+}
+.contact-us .single-info i.card-main-icon,
+.contact-us .single-info > i {
   position: relative;
   left: auto;
+  font-size: 32px;
+  color: #258AA7;
   margin-bottom: 16px;
   display: block;
 }
 .contact-us .single-info .content {
   margin-left: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .contact-us .single-info .content h3 {
   color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 .contact-us .single-info .content p {
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 6px;
 }
 .contact-us .single-info .content a {
-  color: #258AA7;
+  color: #62c3dd;
   font-weight: 500;
+  transition: color 0.2s ease;
 }
 .contact-us .single-info .content a:hover {
   color: #fff;
+}
+
+/* Collapsible Staff & Direct Emails */
+.email-collapse-wrapper {
+  margin: 6px 0 10px;
+}
+.email-collapse-btn {
+  background: rgba(37, 138, 167, 0.16);
+  border: 1px solid rgba(37, 138, 167, 0.35);
+  color: #62c3dd;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.25s ease;
+}
+.email-collapse-btn:hover,
+.email-collapse-btn.active {
+  background: #258AA7;
+  color: #ffffff;
+  border-color: #258AA7;
+}
+.email-collapse-btn .toggle-icon {
+  font-size: 10px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.email-collapse-btn.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.email-collapse-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin 0.35s ease, padding 0.35s ease;
+  margin-top: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 0 12px;
+  border: 1px solid transparent;
+}
+.email-collapse-content.open {
+  max-height: 140px;
+  opacity: 1;
+  margin-top: 8px;
+  padding: 10px 12px;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.email-collapse-content p {
+  font-size: 12.5px !important;
+  margin-bottom: 5px !important;
+  line-height: 1.4 !important;
+}
+.email-collapse-content p:last-child {
+  margin-bottom: 0 !important;
+}
+.email-collapse-content .role-badge {
+  font-size: 11px;
+  color: #94A3B8;
+  display: inline-block;
+  margin-left: 2px;
 }
 
 /* Google Maps */

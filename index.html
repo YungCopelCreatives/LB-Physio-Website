@@ -22,25 +22,25 @@
 		<!-- Preload Critical Fonts -->
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css?v=2.5">
 		<!-- Font Awesome CSS -->
-        <link rel="stylesheet" href="css/fontawesome6.min.css">
+        <link rel="stylesheet" href="css/fontawesome6.min.css?v=2.5">
 		<!-- icofont CSS -->
-         <link rel="stylesheet" href="css/icofont.css">
+         <link rel="stylesheet" href="css/icofont.css?v=2.5">
 		<!-- Slicknav -->
 		<!-- Owl Carousel CSS -->
-         <link rel="stylesheet" href="css/owl-carousel.css">
+         <link rel="stylesheet" href="css/owl-carousel.css?v=2.5">
 		<!-- Animate CSS -->
 		
 		<!-- LB Physiotherapy CSS Architecture -->
-		<link rel="stylesheet" href="css/variables.css">
-		<link rel="stylesheet" href="css/base.css">
-		<link rel="stylesheet" href="css/layout.css">
-		<link rel="stylesheet" href="css/components.css">
-		<link rel="stylesheet" href="css/animations.css">
-		<link rel="stylesheet" href="css/pages/home.css">
-		<link rel="stylesheet" href="css/pages/portfolio.css">
-		<link rel="stylesheet" href="css/responsive.css">
+		<link rel="stylesheet" href="css/variables.css?v=2.5">
+		<link rel="stylesheet" href="css/base.css?v=2.5">
+		<link rel="stylesheet" href="css/layout.css?v=2.5">
+		<link rel="stylesheet" href="css/components.css?v=2.5">
+		<link rel="stylesheet" href="css/animations.css?v=2.5">
+		<link rel="stylesheet" href="css/pages/home.css?v=2.5">
+		<link rel="stylesheet" href="css/pages/portfolio.css?v=2.5">
+		<link rel="stylesheet" href="css/responsive.css?v=2.5">
 		
 		<!-- Open Graph (Social Sharing) -->
 		<meta property="og:title" content="Luyanda Buthelezi Physiotherapy | Expert Care in Northern Johannesburg">
@@ -127,7 +127,7 @@
 					<div class="col-lg-6 col-md-7 col-12">
 						<ul class="top-contact">
 							<li><i class="fa fa-phone"></i>+27 (0)73 948 0811</li>
-							<li><i class="fa fa-envelope"></i><a href="mailto:luyandabschemes@gmail.com">luyandabschemes@gmail.com</a></li>
+							<li><i class="fa fa-envelope"></i><a href="mailto:info@lbphysiotherapy.co.za">info@lbphysiotherapy.co.za</a></li>
 						</ul>
 					</div>
 				</div>
@@ -147,7 +147,7 @@
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
 							<div class="mobile-nav">
-								<button class="navbar-toggler" type="button" aria-label="Open mobile menu">
+								<button class="navbar-toggler" type="button" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenuPanel">
 									<span class="navbar-toggler-icon"></span>
 								</button>
 							</div>
@@ -179,10 +179,18 @@
 			</div>
 			<!--/ End Header Inner -->
 		</header>
-		<!-- Mobile Menu Panel -->
-		<div class="mobile-menu-panel">
+				<!-- Mobile Menu Panel -->
+		<div class="mobile-menu-panel" id="mobileMenuPanel" role="dialog" aria-modal="true" aria-label="Navigation Menu" aria-hidden="true">
+			<div class="mobile-menu-header">
+				<div class="mobile-menu-logo">
+					<img src="img/logo.png" alt="LB Physiotherapy Logo">
+				</div>
+				<button class="mobile-menu-close" type="button" aria-label="Close navigation menu">
+					<i class="fa fa-times"></i>
+				</button>
+			</div>
 			<ul class="mobile-nav-links">
-				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About</a></li>
 				<li><a href="services.html">Services</a></li>
 				<li><a href="portfolio-details.html">Recovery Stories</a></li>
@@ -191,8 +199,16 @@
 			<div class="mobile-menu-cta">
 				<a href="#" class="btn" onclick="openAppointmentModal(event)">Book Appointment</a>
 			</div>
+						<div class="mobile-menu-footer">
+				<div class="mobile-contact-info">
+					<a href="tel:+27739480811"><i class="fa fa-phone"></i> +27 (0)73 948 0811</a>
+					<a href="mailto:info@lbphysiotherapy.co.za"><i class="fa fa-envelope"></i> info@lbphysiotherapy.co.za</a>
+					<a href="mailto:arne@lbphysiotherapy.co.za"><i class="fa fa-user"></i> arne@lbphysiotherapy.co.za (Practice Manager)</a>
+					<a href="mailto:luyanda@lbphysiotherapy.co.za"><i class="fa fa-user-md"></i> luyanda@lbphysiotherapy.co.za (Physiotherapist)</a>
+				</div>
+			</div>
 		</div>
-		<div class="mobile-menu-overlay"></div>
+		<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 		<!-- End Header Area -->
 		
 		<!-- Slider Area -->
@@ -270,8 +286,8 @@
 									<div class="single-content">
 										<span>Emergency Cases</span>
 										<h4>Immediate Care</h4>
-										<p>We provide urgent physiotherapy services for acute injuries and emergencies.</p>
-										<a href="portfolio-details.html">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+										<p>We provide urgent physiotherapy services for acute injuries, pain flare-ups and sports traumas.</p>
+										<a href="https://wa.me/27739480811?text=Urgent%20Physiotherapy%20Enquiry" target="_blank">WHATSAPP URGENT CARE<i class="fa fa-long-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -286,8 +302,8 @@
 									<div class="single-content">
 										<span>Consultation</span>
 										<h4>Appointment Booking</h4>
-										<p>Schedule your appointments with our qualified physiotherapist for personalized care.</p>
-										<a href="portfolio-details.html">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+										<p>Schedule your personalized assessment with our HPCSA-registered physiotherapist.</p>
+										<a href="#" onclick="openAppointmentModal(event)">BOOK APPOINTMENT<i class="fa fa-long-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -307,7 +323,7 @@
 											<li class="day">Saturday <span>8:00 - 14:00</span></li>
 											<li class="day">Sunday <span>Closed</span></li>
 										</ul>
-										<a href="portfolio-details.html">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+										<a href="contact.html">VIEW PRACTICE LOCATION<i class="fa fa-long-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -317,8 +333,6 @@
 			</div>
 		</section>
 		<!--/End Start Schedule Area -->
-
-	
 		
 		<!-- Start Why Choose -->
 		<section class="why-choose section">
@@ -703,13 +717,13 @@
 		<section class="appointment">
 			<div class="container">
 				<div class="appointment-card">
-					<div class="row no-gutters">
-						<div class="col-lg-5">
+					<div class="row no-gutters align-items-end">
+						<div class="col-lg-5 col-12 d-flex align-items-end justify-content-center">
 							<div class="appointment-card-image">
-								<img src="img/contact-img.jpg" alt="Book your consultation at LB Physiotherapy">
+								<img src="img/consultation-physio.jpg" alt="Book your consultation at LB Physiotherapy">
 							</div>
 						</div>
-						<div class="col-lg-7">
+						<div class="col-lg-7 col-12">
 							<div class="appointment-card-form">
 								<h2>Book Your Consultation</h2>
 								<p>Start your recovery journey with a personalized assessment from our qualified physiotherapist.</p>
@@ -821,6 +835,10 @@
 							<div class="single-footer">
 								<h2>About Us</h2>
 								<p>Luyanda Buthelezi Physiotherapy is dedicated to providing expert rehabilitation and holistic care to enhance your health and well-being.</p>
+								<p class="small mt-2" style="color:rgba(255,255,255,0.7);">
+									<strong>Practice No:</strong> 0720001171704<br>
+									<strong>HPCSA:</strong> PT 0154997
+								</p>
 								<!-- Social -->
 								<ul class="social">
 									<li><a href="https://www.instagram.com/lbutheleziphysio"><i class="icofont-instagram" ></i></a></li>
@@ -838,6 +856,7 @@
 											<li><a href="index.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
 											<li><a href="about.html"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
 											<li><a href="services.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+											<li><a href="processes.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Treatment Process</a></li>
 											<li><a href="portfolio-details.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Recovery Stories</a></li>
 											<li><a href="FAQ.html"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
 											<li><a href="contact.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
@@ -878,7 +897,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© 2026 Luyanda Buthelezi Physiotherapy | All Rights Reserved.</p>
+								<p>© 2026 Luyanda Buthelezi Physiotherapy | Practice No: 0720001171704 | HPCSA: PT 0154997</p>
 							</div>
 						</div>
 					</div>
@@ -889,21 +908,20 @@
 		<!--/ End Footer Area -->
 		
 		<!-- jQuery -->
-        <script src="js/jquery.min.js"></script>
-		<script src="js/jquery-migrate-3.0.0.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.min.js?v=2.5"></script>
+		<script src="js/jquery-migrate-3.0.0.js?v=2.5"></script>
+		<script src="js/jquery-ui.min.js?v=2.5"></script>
 		<!-- Popper & Bootstrap -->
-		<script src="js/popper.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="js/popper.min.js?v=2.5"></script>
+		<script src="js/bootstrap.min.js?v=2.5"></script>
 		<!-- Owl Carousel -->
-		<script src="js/owl-carousel.js"></script>
-		<!-- WOW.js -->
+		<script src="js/owl-carousel.js?v=2.5"></script>
 		<!-- LB Physiotherapy JS -->
-		<script src="js/main.js"></script>
-		<script src="js/navigation.js"></script>
-		<script src="js/appointment.js"></script>
-		<script src="js/scripts.js"></script>
-		<script src="js/animations.js"></script>
+		<script src="js/main.js?v=2.5"></script>
+		<script src="js/navigation.js?v=2.5"></script>
+		<script src="js/appointment.js?v=2.5"></script>
+		<script src="js/scripts.js?v=2.5"></script>
+		<script src="js/animations.js?v=2.5"></script>
 
 		<script>
 			// Home page WhatsApp form submission
@@ -926,7 +944,7 @@
 			<div class="partnership-bottom-bar-inner">
 				<img src="img/collab_logo.png" alt="LB Physiotherapy — Official Partner of The Wanderers Club" class="partnership-bottom-bar-logo">
 				<div class="partnership-bottom-bar-text">
-					LB Physiotherapy is the Official Physiotherapy Partner of The Wanderers Club.
+					LB Physiotherapy is the Official Physiotherapy Partner of The Wanderers Club & The Wanderers Chiefs Rugby Team.
 				</div>
 				<a href="portfolio-details.html#chiefs-gallery" class="partnership-bottom-bar-link">Learn More →</a>
 			</div>

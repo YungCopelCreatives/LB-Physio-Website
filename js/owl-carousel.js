@@ -404,11 +404,10 @@
         var d;
         if (this.options.responsiveBaseElement !== b) d = a(this.options.responsiveBaseElement).width();
         else if (b.innerWidth) d = b.innerWidth;
-        else {
-            if (!c.documentElement || !c.documentElement.clientWidth) throw "Can not detect viewport width.";
-            d = c.documentElement.clientWidth
-        }
-        return d
+        else if (c.documentElement && c.documentElement.clientWidth) d = c.documentElement.clientWidth;
+        else if (c.body && c.body.clientWidth) d = c.body.clientWidth;
+        else d = a(b).width() || (c.documentElement ? c.documentElement.clientWidth : 0) || 1024;
+        return d || 1024
     }, e.prototype.replace = function(b) {
         this.$stage.empty(), this._items = [], b && (b = b instanceof jQuery ? b : a(b)), this.settings.nestedItemSelector && (b = b.find("." + this.settings.nestedItemSelector)), b.filter(function() {
             return 1 === this.nodeType
@@ -721,10 +720,10 @@ function(a, b, c) {
                 this.stop()
             }, this),
             "mouseover.owl.autoplay": a.proxy(function() {
-                this.core.settings.autoplayHoverPause && this.pause()
+                this.core && this.core.settings && this.core.settings.autoplayHoverPause && this.pause()
             }, this),
             "mouseleave.owl.autoplay": a.proxy(function() {
-                this.core.settings.autoplayHoverPause && this.autoplay()
+                this.core && this.core.settings && this.core.settings.autoplayHoverPause && this.autoplay()
             }, this)
         }, this.core.$element.on(this.handlers)
     };
@@ -734,10 +733,12 @@ function(a, b, c) {
         autoplayHoverPause: !1,
         autoplaySpeed: !1
     }, d.prototype.autoplay = function() {
+        if (!this.core || !this.core.settings) return;
         this.core.settings.autoplay && !this.core.state.videoPlay ? (b.clearInterval(this.interval), this.interval = b.setInterval(a.proxy(function() {
             this.play()
         }, this), this.core.settings.autoplayTimeout)) : b.clearInterval(this.interval)
     }, d.prototype.play = function() {
+        if (!this.core || !this.core.settings || !this.core.state) return;
         return c.hidden === !0 || this.core.state.isTouch || this.core.state.isScrolling || this.core.state.isSwiping || this.core.state.inMotion ? void 0 : this.core.settings.autoplay === !1 ? void b.clearInterval(this.interval) : void this.core.next(this.core.settings.autoplaySpeed)
     }, d.prototype.stop = function() {
         b.clearInterval(this.interval)
@@ -746,7 +747,9 @@ function(a, b, c) {
     }, d.prototype.destroy = function() {
         var a, c;
         b.clearInterval(this.interval);
-        for (a in this.handlers) this.core.$element.off(a, this.handlers[a]);
+        if (this.core && this.core.$element) {
+            for (a in this.handlers) this.core.$element.off(a, this.handlers[a]);
+        }
         for (c in Object.getOwnPropertyNames(this)) "function" != typeof this[c] && (this[c] = null)
     }, a.fn.owlCarousel.Constructor.Plugins.autoplay = d
 }(window.Zepto || window.jQuery, window, document),

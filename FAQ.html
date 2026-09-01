@@ -19,20 +19,20 @@
 	<meta name="theme-color" content="#258AA7">
     
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css?v=2.5">
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="css/fontawesome6.min.css">
+    <link rel="stylesheet" href="css/fontawesome6.min.css?v=2.5">
     <!-- icofont CSS -->
-    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/icofont.css?v=2.5">
     
     <!-- LB Physiotherapy CSS Architecture -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/pages/faq.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/variables.css?v=2.5">
+    <link rel="stylesheet" href="css/base.css?v=2.5">
+    <link rel="stylesheet" href="css/layout.css?v=2.5">
+    <link rel="stylesheet" href="css/components.css?v=2.5">
+    <link rel="stylesheet" href="css/animations.css?v=2.5">
+    <link rel="stylesheet" href="css/pages/faq.css?v=2.5">
+    <link rel="stylesheet" href="css/responsive.css?v=2.5">
     
     <!-- Open Graph (Social Sharing) -->
     <meta property="og:title" content="Physiotherapy FAQs Randburg | Common Questions Answered">
@@ -50,35 +50,81 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalBusiness",
-      "name": "Luyanda Buthelezi Physiotherapy",
-      "url": "https://www.lbphysiotherapy.co.za",
-      "telephone": "+27739480811",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "23 Market street",
-        "addressLocality": "Randburg",
-        "addressRegion": "Gauteng",
-        "postalCode": "2188",
-        "addressCountry": "ZA"
-      },
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-          "opens": "14:00",
-          "closes": "18:00"
+          "@type": "MedicalBusiness",
+          "name": "Luyanda Buthelezi Physiotherapy",
+          "url": "https://www.lbphysiotherapy.co.za",
+          "telephone": "+27739480811",
+          "identifier": {
+            "@type": "PropertyValue",
+            "name": "Practice Number",
+            "value": "0720001171704"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "23 Market street",
+            "addressLocality": "Randburg",
+            "addressRegion": "Gauteng",
+            "postalCode": "2188",
+            "addressCountry": "ZA"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+              "opens": "14:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "08:00",
+              "closes": "14:00"
+            }
+          ],
+          "sameAs": [
+            "https://www.instagram.com/lbutheleziphysio",
+            "https://www.facebook.com/luyanda.buthelezi.773"
+          ]
         },
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "08:00",
-          "closes": "14:00"
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What are your Practice Number and HPCSA registration details?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Luyanda Buthelezi Physiotherapy is registered with the Health Professions Council of South Africa (HPCSA License: PT 0154997) and the Board of Healthcare Funders (Practice Number: 0720001171704)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does Medical Aid claiming work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We charge standard medical aid rates and assist patients with direct medical aid claiming and Prescribed Minimum Benefits (PMB) submissions across all major South African schemes (Discovery, GEMS, Bonitas, Medscheme, Momentum). We also accept card, cash, and EFT payments."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need a medical referral to see a physiotherapist?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "As first-line healthcare practitioners, physiotherapists can assess and treat patients without a GP referral. However, if you are claiming through certain medical aid plans or PMB conditions, a doctor's referral letter may be beneficial."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What sports teams or clubs do you work with?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "LB Physiotherapy is the Official Physiotherapy Partner to The Wanderers Club and provides dedicated pitchside sports physiotherapy and rehabilitation for The Wanderers Chiefs rugby team."
+              }
+            }
+          ]
         }
-      ],
-      "sameAs": [
-        "https://www.instagram.com/lbutheleziphysio",
-        "https://www.facebook.com/luyanda.buthelezi.773"
       ]
     }
     </script>
@@ -116,7 +162,7 @@
                     <div class="col-lg-6 col-md-7 col-12">
                         <ul class="top-contact">
                             <li><i class="fa fa-phone"></i>+27 (0)73 948 0811</li>
-                            <li><i class="fa fa-envelope"></i><a href="mailto:luyandabschemes@gmail.com">luyandabschemes@gmail.com</a></li>
+                            <li><i class="fa fa-envelope"></i><a href="mailto:info@lbphysiotherapy.co.za">info@lbphysiotherapy.co.za</a></li>
                         </ul>
                     </div>
                 </div>
@@ -133,7 +179,7 @@
                                 <a href="index.html"><img src="img/logo.png" alt="Luyanda Buthelezi Physiotherapy logo"></a>
                             </div>
                             <div class="mobile-nav">
-                                <button class="navbar-toggler" type="button" aria-label="Open mobile menu">
+                                <button class="navbar-toggler" type="button" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenuPanel">
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
                             </div>
@@ -161,20 +207,36 @@
             </div>
         </div>
     </header>
-    <!-- Mobile Menu Panel -->
-    <div class="mobile-menu-panel">
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="portfolio-details.html">Recovery Stories</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <div class="mobile-menu-cta">
-            <a href="#" class="btn" onclick="openAppointmentModal(event)">Book Appointment</a>
-        </div>
-    </div>
-    <div class="mobile-menu-overlay"></div>
+    		<!-- Mobile Menu Panel -->
+		<div class="mobile-menu-panel" id="mobileMenuPanel" role="dialog" aria-modal="true" aria-label="Navigation Menu" aria-hidden="true">
+			<div class="mobile-menu-header">
+				<div class="mobile-menu-logo">
+					<img src="img/logo.png" alt="LB Physiotherapy Logo">
+				</div>
+				<button class="mobile-menu-close" type="button" aria-label="Close navigation menu">
+					<i class="fa fa-times"></i>
+				</button>
+			</div>
+			<ul class="mobile-nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="portfolio-details.html">Recovery Stories</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+			<div class="mobile-menu-cta">
+				<a href="#" class="btn" onclick="openAppointmentModal(event)">Book Appointment</a>
+			</div>
+						<div class="mobile-menu-footer">
+				<div class="mobile-contact-info">
+					<a href="tel:+27739480811"><i class="fa fa-phone"></i> +27 (0)73 948 0811</a>
+					<a href="mailto:info@lbphysiotherapy.co.za"><i class="fa fa-envelope"></i> info@lbphysiotherapy.co.za</a>
+					<a href="mailto:arne@lbphysiotherapy.co.za"><i class="fa fa-user"></i> arne@lbphysiotherapy.co.za (Practice Manager)</a>
+					<a href="mailto:luyanda@lbphysiotherapy.co.za"><i class="fa fa-user-md"></i> luyanda@lbphysiotherapy.co.za (Physiotherapist)</a>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
     <!-- End Header Area -->
     
     <!-- Breadcrumbs -->
@@ -206,6 +268,50 @@
 
             <div class="row">
                 <div class="col-lg-8 offset-lg-2">
+                    <!-- FAQ Item: Credentials -->
+                    <div class="faq-item">
+                        <h5 role="button" tabindex="0" onclick="toggleAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAnswer(this);}">
+                            <i class="fa fa-chevron-right mr-2"></i>
+                            What are your Practice Number and HPCSA registration credentials?
+                        </h5>
+                        <div class="faq-answer">
+                            <p>LB Physiotherapy is fully accredited and registered with the Health Professions Council of South Africa (<strong>HPCSA License: PT 0154997</strong>) and the Board of Healthcare Funders (<strong>Practice Number: 0720001171704</strong>). All sessions can be claimed through South African medical aids.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item: Medical Aid -->
+                    <div class="faq-item">
+                        <h5 role="button" tabindex="0" onclick="toggleAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAnswer(this);}">
+                            <i class="fa fa-chevron-right mr-2"></i>
+                            How does Medical Aid claiming work?
+                        </h5>
+                        <div class="faq-answer">
+                            <p>We charge standard medical aid rates and can assist with direct medical aid claims and Prescribed Minimum Benefits (PMB) submissions across all major schemes including Discovery Health, GEMS, Bonitas, Medscheme, Momentum, and Bestmed. We also accept card, cash, and EFT payments.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item: Sports Partnerships -->
+                    <div class="faq-item">
+                        <h5 role="button" tabindex="0" onclick="toggleAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAnswer(this);}">
+                            <i class="fa fa-chevron-right mr-2"></i>
+                            What sports clubs and teams are you affiliated with?
+                        </h5>
+                        <div class="faq-answer">
+                            <p>We are the Official Physiotherapy Partner to <strong>The Wanderers Club</strong> and provide matchday physiotherapy and acute sports rehabilitation for <strong>The Wanderers Chiefs Rugby Team</strong>, alongside treating school and amateur athletes across Gauteng.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item: Treatment Process -->
+                    <div class="faq-item">
+                        <h5 role="button" tabindex="0" onclick="toggleAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAnswer(this);}">
+                            <i class="fa fa-chevron-right mr-2"></i>
+                            How does your treatment process work from start to finish?
+                        </h5>
+                        <div class="faq-answer">
+                            <p>We follow a structured 4-step rehabilitation process: (1) Comprehensive Clinical Assessment, (2) Root-Cause Diagnosis & Goal Setting, (3) Evidence-Based Treatment & Manual Therapy, and (4) Progressive Rehabilitation & Prevention. <a href="processes.html" style="color:#258AA7;font-weight:600;">Learn more about our 4-Step Process →</a></p>
+                        </div>
+                    </div>
+
                     <!-- FAQ Item 1 -->
                     <div class="faq-item">
                         <h5 role="button" tabindex="0" onclick="toggleAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAnswer(this);}">
@@ -213,7 +319,7 @@
                             Do I need a medical referral to see a physiotherapist?
                         </h5>
                         <div class="faq-answer">
-                            <p>While a referral from a doctor is not always necessary, many medical aid schemes require one to cover costs. If you have medical aid, we recommend checking with your provider or bringing a letter from your doctor. If paying privately, no referral is needed.</p>
+                            <p>No doctor referral is required for private appointments as physiotherapists are first-line primary practitioners in South Africa. If claiming through specific hospital plans or PMB conditions, a doctor's referral letter can be helpful.</p>
                         </div>
                     </div>
 
@@ -239,17 +345,6 @@
                         </div>
                     </div>
 
-                    <!-- FAQ Item 4 -->
-                    <div class="faq-item">
-                        <h5 role="button" tabindex="0" onclick="toggleAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAnswer(this);}">
-                            <i class="fa fa-chevron-right mr-2"></i>
-                            Will medical aid cover physiotherapy?
-                        </h5>
-                        <div class="faq-answer">
-                            <p>Most medical aid schemes do cover physiotherapy, but coverage varies. We can provide receipts for you to claim directly, or we can check your benefits beforehand. Please bring your medical aid details to your appointment.</p>
-                        </div>
-                    </div>
-
                     <!-- FAQ Item 5 -->
                     <div class="faq-item">
                         <h5 role="button" tabindex="0" onclick="toggleAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAnswer(this);}">
@@ -268,7 +363,7 @@
                             What is your cancellation policy?
                         </h5>
                         <div class="faq-answer">
-                            <p>We ask for 24 hours' notice for cancellations. If you need to reschedule, please contact us as soon as possible. Last-minute cancellations may incur a cancellation fee. We understand that emergencies happen, so please communicate with us.</p>
+                            <p>We ask for 24 hours' notice for cancellations. If you need to reschedule, please contact us as soon as possible via WhatsApp or phone. Last-minute cancellations may incur a fee.</p>
                         </div>
                     </div>
 
@@ -279,7 +374,7 @@
                             Do you treat children?
                         </h5>
                         <div class="faq-answer">
-                            <p>Yes, we specialize in pediatric physiotherapy. Children of all ages can benefit from our services, whether for developmental concerns, injuries, or post-surgical rehabilitation. We ensure a comfortable, child-friendly environment.</p>
+                            <p>Yes, we provide specialized pediatric physiotherapy for children and adolescents, including developmental movement milestones, posture correction, sports injuries, and post-surgical care.</p>
                         </div>
                     </div>
 
@@ -287,10 +382,10 @@
                     <div class="faq-item">
                         <h5 role="button" tabindex="0" onclick="toggleAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAnswer(this);}">
                             <i class="fa fa-chevron-right mr-2"></i>
-                            What payment methods do you accept?
+                            Can I book an appointment online or via WhatsApp?
                         </h5>
                         <div class="faq-answer">
-                            <p>We accept cash, card payments (Visa, Mastercard), and bank transfers. We can also process medical aid claims directly in many cases. Ask about our payment options at the time of booking.</p>
+                            <p>Yes! You can book through our website <a href="appointment.html" style="color:#258AA7;font-weight:600;">appointment page</a> or message us directly on WhatsApp at <a href="https://wa.me/27739480811" target="_blank" style="color:#258AA7;font-weight:600;">+27 73 948 0811</a> for instant confirmation.</p>
                         </div>
                     </div>
 
@@ -298,21 +393,10 @@
                     <div class="faq-item">
                         <h5 role="button" tabindex="0" onclick="toggleAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAnswer(this);}">
                             <i class="fa fa-chevron-right mr-2"></i>
-                            Can I book an appointment online or via WhatsApp?
+                            Do you offer after-hours and weekend appointments?
                         </h5>
                         <div class="faq-answer">
-                            <p>Yes! You can book through our website appointment form or message us on WhatsApp at +27 73 948 0811. We'll respond quickly to confirm your session and answer any questions.</p>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Item 10 -->
-                    <div class="faq-item">
-                        <h5 role="button" tabindex="0" onclick="toggleAnswer(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleAnswer(this);}">
-                            <i class="fa fa-chevron-right mr-2"></i>
-                            Do you offer after-hours appointments?
-                        </h5>
-                        <div class="faq-answer">
-                            <p>Yes, we do! We're open Monday to Friday from 14:00–18:00 and Saturday from 08:00–14:00. This allows working professionals and students to access care outside normal business hours. Sunday is closed.</p>
+                            <p>Yes! We operate after-hours Monday to Friday from 14:00 to 18:00 and Saturday mornings from 08:00 to 14:00, making it convenient for working professionals and student athletes.</p>
                         </div>
                     </div>
                 </div>
@@ -352,6 +436,7 @@
                                         <li><a href="index.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
                                         <li><a href="about.html"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
                                         <li><a href="services.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+                                        <li><a href="processes.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Treatment Process</a></li>
                                         <li><a href="portfolio-details.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Recovery Stories</a></li>
                                         <li><a href="FAQ.html"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
                                         <li><a href="contact.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
@@ -390,7 +475,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-12">
                         <div class="copyright-content">
-                            <p>&copy; 2026 Luyanda Buthelezi Physiotherapy | All Rights Reserved.</p>
+                            <p>&copy; 2026 Luyanda Buthelezi Physiotherapy | Practice No: 0720001171704 | HPCSA: PT 0154997</p>
                         </div>
                     </div>
                 </div>
@@ -445,15 +530,15 @@
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.0.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/appointment.js"></script>
-    <script src="js/animations.js"></script>
+    <script src="js/jquery.min.js?v=2.5"></script>
+    <script src="js/jquery-migrate-3.0.0.js?v=2.5"></script>
+    <script src="js/jquery-ui.min.js?v=2.5"></script>
+    <script src="js/popper.min.js?v=2.5"></script>
+    <script src="js/bootstrap.min.js?v=2.5"></script>
+    <script src="js/main.js?v=2.5"></script>
+    <script src="js/navigation.js?v=2.5"></script>
+    <script src="js/appointment.js?v=2.5"></script>
+    <script src="js/animations.js?v=2.5"></script>
 
     <script>
         function toggleAnswer(element) {

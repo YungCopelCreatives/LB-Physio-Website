@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = str_replace(["\r", "\n"], '', $subject);
     $subject = !empty($subject) ? $subject : 'No Subject';
 
-    $recipient = "luyandabschemes@gmail.com";
+    $recipient = "info@lbphysiotherapy.co.za, arne@lbphysiotherapy.co.za, luyanda@lbphysiotherapy.co.za";
     $email_subject = "New Message: " . $subject;
 
     $email_content = "Name: $name\n";

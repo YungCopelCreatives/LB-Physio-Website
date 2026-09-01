@@ -11,16 +11,16 @@
 		 <meta name="keywords" content="physiotherapy Randburg, sports injury rehab Gauteng, pediatric physiotherapy, chronic pain treatment, post-surgery rehab, BokSmart accreditation">
 		 <meta name="author" content="Luyanda Buthelezi Physiotherapy">
 	 
-		 <!-- Open Graph (Social Sharin) -->
-		 <meta property="og:title" content="Luyanda Buthelezi Physiotherapy | Expert Care in Northern Johannesburg">
-		 <meta property="og:description" content="Committed to restoring functional independence for all ages. Book your appointment today.">
-		 <meta property="og:url" content="https://www.lbphysiotherapy.co.za/">
-		 <meta property="og:image" content="https://www.lbphysiotherapy.co.za/images/clinic-banner.jpg">
+		 <!-- Open Graph (Social Sharing) -->
+		 <meta property="og:title" content="Recovery Stories & Sports Partnerships | LB Physiotherapy Randburg">
+		 <meta property="og:description" content="Explore real patient rehabilitation outcomes and our official sports partnership with The Wanderers Club & Wanderers Chiefs Rugby.">
+		 <meta property="og:url" content="https://www.lbphysiotherapy.co.za/portfolio-details.html">
+		 <meta property="og:image" content="https://www.lbphysiotherapy.co.za/img/slider.jpg">
 		 <meta property="og:type" content="website">
 	 
 		 <!-- Twitter Card -->
-		 <meta name="twitter:title" content="Luyanda Buthelezi Physiotherapy | Randburg's Rehab Specialist">
-		 <meta name="twitter:description" content="BokSmart-accredited physiotherapy for athletes, pediatric care, and chronic pain management. Serving Northriding and Gauteng.">
+		 <meta name="twitter:title" content="Recovery Stories & Sports Rehab | LB Physiotherapy">
+		 <meta name="twitter:description" content="Official Physiotherapist to The Wanderers Club & Wanderers Chiefs Rugby. Patient recoveries in Northriding, Randburg.">
 		 <meta name="twitter:card" content="summary_large_image">
 		<!-- Canonical -->
 		<link rel="canonical" href="https://www.lbphysiotherapy.co.za/portfolio-details.html">
@@ -35,24 +35,24 @@
 		<!-- Google Fonts -->
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css?v=2.5">
 		<!-- Font Awesome CSS -->
-        <link rel="stylesheet" href="css/fontawesome6.min.css">
+        <link rel="stylesheet" href="css/fontawesome6.min.css?v=2.5">
 		<!-- icofont CSS -->
-        <link rel="stylesheet" href="css/icofont.css">
+        <link rel="stylesheet" href="css/icofont.css?v=2.5">
 		<!-- Slicknav -->
 		<!-- Owl Carousel CSS -->
-        <link rel="stylesheet" href="css/owl-carousel.css">
+        <link rel="stylesheet" href="css/owl-carousel.css?v=2.5">
 		<!-- Animate CSS -->
 		
 		<!-- LB Physiotherapy CSS Architecture -->
-		<link rel="stylesheet" href="css/variables.css">
-		<link rel="stylesheet" href="css/base.css">
-		<link rel="stylesheet" href="css/layout.css">
-		<link rel="stylesheet" href="css/components.css">
-		<link rel="stylesheet" href="css/animations.css">
-		<link rel="stylesheet" href="css/pages/portfolio.css">
-		<link rel="stylesheet" href="css/responsive.css">
+		<link rel="stylesheet" href="css/variables.css?v=2.5">
+		<link rel="stylesheet" href="css/base.css?v=2.5">
+		<link rel="stylesheet" href="css/layout.css?v=2.5">
+		<link rel="stylesheet" href="css/components.css?v=2.5">
+		<link rel="stylesheet" href="css/animations.css?v=2.5">
+		<link rel="stylesheet" href="css/pages/portfolio.css?v=2.5">
+		<link rel="stylesheet" href="css/responsive.css?v=2.5">
 		
 		<!-- Slick CSS for the slider -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
@@ -94,7 +94,7 @@
 						<div class="col-lg-6 col-md-7 col-12">
 							<ul class="top-contact">
 								<li><i class="fa fa-phone"></i>+27 (0)73 948 0811</li>
-								<li><i class="fa fa-envelope"></i><a href="mailto:luyandabschemes@gmail.com">luyandabschemes@gmail.com</a></li>
+								<li><i class="fa fa-envelope"></i><a href="mailto:info@lbphysiotherapy.co.za">info@lbphysiotherapy.co.za</a></li>
 							</ul>
 						</div>
 					</div>
@@ -114,7 +114,7 @@
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
 								<div class="mobile-nav">
-        <button class="navbar-toggler" type="button" aria-label="Open mobile menu">
+        <button class="navbar-toggler" type="button" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenuPanel">
         <span class="navbar-toggler-icon"></span>
         </button>
 								</div>
@@ -146,20 +146,36 @@
 			</div>
 			<!--/ End Header Inner -->
 		</header>
-        <!-- Mobile Menu Panel -->
-        <div class="mobile-menu-panel">
-            <ul class="mobile-nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li class="active"><a href="portfolio-details.html">Recovery Stories</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-            <div class="mobile-menu-cta">
-                <a href="#" class="btn" onclick="openAppointmentModal(event)">Book Appointment</a>
-            </div>
-        </div>
-        <div class="mobile-menu-overlay"></div>
+        		<!-- Mobile Menu Panel -->
+		<div class="mobile-menu-panel" id="mobileMenuPanel" role="dialog" aria-modal="true" aria-label="Navigation Menu" aria-hidden="true">
+			<div class="mobile-menu-header">
+				<div class="mobile-menu-logo">
+					<img src="img/logo.png" alt="LB Physiotherapy Logo">
+				</div>
+				<button class="mobile-menu-close" type="button" aria-label="Close navigation menu">
+					<i class="fa fa-times"></i>
+				</button>
+			</div>
+			<ul class="mobile-nav-links">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="portfolio-details.html">Recovery Stories</a></li>
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+			<div class="mobile-menu-cta">
+				<a href="#" class="btn" onclick="openAppointmentModal(event)">Book Appointment</a>
+			</div>
+						<div class="mobile-menu-footer">
+				<div class="mobile-contact-info">
+					<a href="tel:+27739480811"><i class="fa fa-phone"></i> +27 (0)73 948 0811</a>
+					<a href="mailto:info@lbphysiotherapy.co.za"><i class="fa fa-envelope"></i> info@lbphysiotherapy.co.za</a>
+					<a href="mailto:arne@lbphysiotherapy.co.za"><i class="fa fa-user"></i> arne@lbphysiotherapy.co.za (Practice Manager)</a>
+					<a href="mailto:luyanda@lbphysiotherapy.co.za"><i class="fa fa-user-md"></i> luyanda@lbphysiotherapy.co.za (Physiotherapist)</a>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
         <!-- End Header Area -->
 	
 		<!-- Breadcrumbs -->
@@ -182,160 +198,287 @@
 		<!-- End Breadcrumbs -->
 	
 		
-			<main class="card-grid">
+			<main id="main-content" class="card-grid">
 				<!-- Card 1 -->
 				<div class="service-card">
-					<img src="img/baack.jpg" alt="Pain management and mobility enhancement" class="card-image">
+					<img src="img/baack.jpg" alt="Pain management and spinal mobility enhancement" class="card-image" loading="lazy">
 					<div class="card-content">
-						<div class="card-caption">Pain Management and Mobility Enhancement</div>
-						<button class="learn-more-btn" onclick="toggleDetails(this)">View Details</button>
+						<div class="card-caption">Spinal Mobility & Chronic Pain Relief</div>
+						<button class="learn-more-btn" onclick="toggleDetails(this)">View Case Study</button>
 						<div class="details">
-							<h3>Project Overview</h3>
+							<h3>Clinical Case Overview</h3>
 							<ul>
-								<li><strong>Category:</strong> General Musculoskeletal Rehabilitation</li>
-								<li><strong>Date:</strong> March 12, 2024</li>
-								<li><strong>Client:</strong> Sandile Mkhwanazi</li>
+								<li><strong>Condition:</strong> Lumbar Spine Disc Derangement & Sciatica</li>
+								<li><strong>Discipline:</strong> Musculoskeletal Rehabilitation</li>
+								<li><strong>Patient:</strong> Sandile M. (Office Professional)</li>
 							</ul>
-							<h4>Project Details</h4>
-							<p>Comprehensive treatment plan combining manual therapy and therapeutic exercises resulting in complete pain relief and restored mobility.</p>
+							<h4>Rehabilitation Protocol & Outcome</h4>
+							<p>Tailored multimodal program incorporating joint mobilization, neurodynamic glides, core stabilization exercises, and ergonomic workstation restructuring. Achieved 100% pain reduction and full spinal mobility within 6 weeks.</p>
 						</div>
 					</div>
 				</div>
 		
 				<!-- Card 2 -->
 				<div class="service-card">
-					<img src="img/ankle.jpg" alt="Sports rehabilitation" class="card-image">
+					<img src="img/ankle.jpg" alt="Sports ankle rehabilitation" class="card-image" loading="lazy">
 					<div class="card-content">
-						<div class="card-caption">Post-Surgical Ankle Rehabilitation</div>
-						<button class="learn-more-btn" onclick="toggleDetails(this)">View Details</button>
+						<div class="card-caption">Post-Surgical Ankle Ligament Rehab</div>
+						<button class="learn-more-btn" onclick="toggleDetails(this)">View Case Study</button>
 						<div class="details">
-							<h3>Project Overview</h3>
+							<h3>Clinical Case Overview</h3>
 							<ul>
-								<li><strong>Category:</strong> Sports Injury Rehabilitation</li>
-								<li><strong>Date:</strong> July 25, 2024</li>
-								<li><strong>Client:</strong> Lusanda Dubazane</li>
+								<li><strong>Condition:</strong> Grade III ATFL Tear & Post-Op Ankle Reconstruction</li>
+								<li><strong>Discipline:</strong> Sports Injury & Return-to-Play</li>
+								<li><strong>Patient:</strong> Lusanda D. (Wanderers Chiefs Rugby Player)</li>
 							</ul>
-							<h4>Project Details</h4>
-							<p>Specialized rehabilitation program for rugby player post-ankle surgery, enabling return to sport with enhanced strength and mobility.</p>
+							<h4>Rehabilitation Protocol & Outcome</h4>
+							<p>Phased sports-specific rehabilitation focused on proprioception, plyometrics, change-of-direction agility, and matchday load monitoring. Successfully returned to full rugby competition at peak performance without re-injury.</p>
 						</div>
 					</div>
 				</div>
 		
 				<!-- Card 3 -->
 				<div class="service-card">
-					<img src="img/knee.jpg" alt="Scapular dysfunction treatment" class="card-image">
+					<img src="img/knee.jpg" alt="Scapular dysfunction and shoulder treatment" class="card-image" loading="lazy">
 					<div class="card-content">
-						<div class="card-caption">Scapular Dysfunction Treatment</div>
-						<button class="learn-more-btn" onclick="toggleDetails(this)">View Details</button>
+						<div class="card-caption">Scapular Dyskinesis & Shoulder Rehab</div>
+						<button class="learn-more-btn" onclick="toggleDetails(this)">View Case Study</button>
 						<div class="details">
-							<h3>Project Overview</h3>
+							<h3>Clinical Case Overview</h3>
 							<ul>
-								<li><strong>Category:</strong> Musculoskeletal Rehabilitation</li>
-								<li><strong>Date:</strong> November 5, 2024</li>
-								<li><strong>Client:</strong> Ntando Mazibuko</li>
+								<li><strong>Condition:</strong> Scapular Dyskinesis & Cervicogenic Headaches</li>
+								<li><strong>Discipline:</strong> Postural & Myofascial Therapy</li>
+								<li><strong>Patient:</strong> Ntando M. (Athlete)</li>
 							</ul>
-							<h4>Project Details</h4>
-							<p>Combination of myofascial release and targeted strengthening resolved chronic scapular issues and restored full neck mobility.</p>
+							<h4>Rehabilitation Protocol & Outcome</h4>
+							<p>Deep myofascial release, serratus anterior and lower trapezius neuromuscular re-education, and cervical spine manual therapy completely resolved neck discomfort and restored full shoulder range of motion.</p>
 						</div>
 					</div>
 				</div>
 		
 				<!-- Card 4 -->
 				<div class="service-card">
-					<img src="img/strength-recovery.jpg" alt="Post-surgical recovery" class="card-image">
+					<img src="img/strength-recovery.jpg" alt="Post-surgical strength recovery" class="card-image" loading="lazy">
 					<div class="card-content">
-						<div class="card-caption">Post-Surgical Strength Recovery</div>
-						<button class="learn-more-btn" onclick="toggleDetails(this)">View Details</button>
+						<div class="card-caption">Post-Surgical Functional Independence</div>
+						<button class="learn-more-btn" onclick="toggleDetails(this)">View Case Study</button>
 						<div class="details">
-							<h3>Project Overview</h3>
+							<h3>Clinical Case Overview</h3>
 							<ul>
-								<li><strong>Category:</strong> Post-Surgical Rehabilitation</li>
-								<li><strong>Date:</strong> January 10, 2025</li>
-								<li><strong>Client:</strong> Wendy</li>
+								<li><strong>Condition:</strong> Prolonged Post-Op Immobility & Muscle Atrophy</li>
+								<li><strong>Discipline:</strong> Post-Operative Rehabilitation</li>
+								<li><strong>Patient:</strong> Wendy K.</li>
 							</ul>
-							<h4>Project Details</h4>
-							<p>Home-based rehabilitation program helped client regain mobility after 7 months of post-surgical immobility.</p>
+							<h4>Rehabilitation Protocol & Outcome</h4>
+							<p>Graduated progressive resistance training and neuromuscular reactivation enabled the patient to walk unassisted and regain total independent daily functioning after 7 months of immobility.</p>
 						</div>
 					</div>
 				</div>
 		
 				<!-- Card 5 -->
 				<div class="service-card">
-					<img src="img/pain-management.jpg" alt="Back pain management" class="card-image">
+					<img src="img/pain-management.jpg" alt="Back pain management and postural restoration" class="card-image" loading="lazy">
 					<div class="card-content">
-						<div class="card-caption">Back Pain Management</div>
-						<button class="learn-more-btn" onclick="toggleDetails(this)">View Details</button>
+						<div class="card-caption">Chronic Cervicothoracic Pain Management</div>
+						<button class="learn-more-btn" onclick="toggleDetails(this)">View Case Study</button>
 						<div class="details">
-							<h3>Project Overview</h3>
+							<h3>Clinical Case Overview</h3>
 							<ul>
-								<li><strong>Category:</strong> Musculoskeletal Rehabilitation</li>
-								<li><strong>Date:</strong> May 28, 2024</li>
-								<li><strong>Client:</strong> Mandisa Jakavula</li>
+								<li><strong>Condition:</strong> Chronic Upper & Lower Back Spasm</li>
+								<li><strong>Discipline:</strong> Chronic Pain Management</li>
+								<li><strong>Patient:</strong> Mandisa J.</li>
 							</ul>
-							<h4>Project Details</h4>
-							<p>Postural correction and personalized exercise program resolved chronic upper/lower back pain.</p>
+							<h4>Rehabilitation Protocol & Outcome</h4>
+							<p>Targeted manual therapy, dry needling, postural realignment exercises, and patient education eliminated dependence on pain medications and restored active lifestyle activities.</p>
 						</div>
 					</div>
 				</div>
 		
 				<!-- Card 6 -->
 				<div class="service-card">
-					<img src="img/knee.jpg" alt="Knee rehabilitation" class="card-image">
+					<img src="img/knee.jpg" alt="Total knee replacement rehabilitation" class="card-image" loading="lazy">
 					<div class="card-content">
-						<div class="card-caption">Knee Replacement Rehabilitation</div>
-						<button class="learn-more-btn" onclick="toggleDetails(this)">View Details</button>
+						<div class="card-caption">Total Knee Replacement (TKR) Recovery</div>
+						<button class="learn-more-btn" onclick="toggleDetails(this)">View Case Study</button>
 						<div class="details">
-							<h3>Project Overview</h3>
+							<h3>Clinical Case Overview</h3>
 							<ul>
-								<li><strong>Category:</strong> Post-Surgical Rehabilitation</li>
-								<li><strong>Date:</strong> August 15, 2024</li>
-								<li><strong>Client:</strong> Thabiso Khumalo</li>
+								<li><strong>Condition:</strong> Post-Operative Total Knee Arthroplasty</li>
+								<li><strong>Discipline:</strong> Joint Replacement Rehabilitation</li>
+								<li><strong>Patient:</strong> Thabiso K.</li>
 							</ul>
-							<h4>Project Details</h4>
-							<p>Progressive rehabilitation program restored full knee mobility within 8 weeks post-surgery.</p>
+							<h4>Rehabilitation Protocol & Outcome</h4>
+							<p>Structured early mobilization, quadriceps reactivation, gait retraining, and swelling control achieved 120° knee flexion and safe stair navigation within 8 weeks post-surgery.</p>
 						</div>
 					</div>
 				</div>
 			</main>
 		
     <section id="chiefs-gallery">
-        <!-- Collab Intro -->
+        <!-- Partnership Intro Header -->
         <div class="collab-intro">
-            <img src="img/collab_logo.png" class="collab-logo" alt="Luyanda Buthelezi Physiotherapy × The Chiefs Logo">
-            <h1>Official Partnership</h1>
-            <p>Luyanda Buthelezi Physiotherapy × The Chiefs</p>
+            <div class="partnership-badge">
+                <i class="fa fa-handshake"></i> Official Sports Partnership
+            </div>
+            <img src="img/collab_logo.png" class="collab-logo" alt="Luyanda Buthelezi Physiotherapy × The Wanderers Club Logo">
+            <h1>The Wanderers Club × LB Physiotherapy</h1>
+            <p class="collab-subhead">Home of the Wanderers Chiefs Rugby Team</p>
+            <p class="collab-desc">Matchday physiotherapy, sideline trauma response, and elite sports recovery at The Wanderers Club.</p>
         </div>
 
-        <!-- Floating Gallery -->
-        <section class="chiefs-showcase">
-            <div class="floating-gallery">
-                <div class="float-card big">
-                    <img loading="lazy" src="img/Partnership1.jpg" alt="Physiotherapist treating an athlete">
-                </div>
-                <div class="float-card">
-                    <img loading="lazy" src="img/Partnership2.jpg" alt="LB Physio therapy session with a sports player">
-                </div>
-                <div class="float-card">
-                    <img loading="lazy" src="img/Partnership3.jpg" alt="Sports injury assessment session">
-                </div>
-                <div class="float-card">
-                    <img loading="lazy" src="img/Partnership4.jpg" alt="Physiotherapist and team discussion">
-                </div>
-                <div class="float-card">
-                    <img loading="lazy" src="img/Partnership5.jpg" alt="Athlete rehabilitation exercise">
-                </div>
-                <div class="float-card">
-                    <img loading="lazy" src="img/Partnership6.jpg" alt="Sports therapy session on the field">
-                </div>
-                <div class="float-card">
-                    <img loading="lazy" src="img/Partnership7.jpg" alt="Clinician performing sports massage">
-                </div>
-                <div class="float-card wide">
-                    <img loading="lazy" src="img/Partnership8.jpg" alt="Team physiotherapy group training">
+        <!-- Two-Way Conveyor Sliding Photo Belt -->
+        <div class="photo-belt-wrapper">
+            <!-- Line 1: Sliding Left -->
+            <div class="belt-track-container belt-move-left" aria-label="Matchday photos line 1 sliding left">
+                <div class="belt-track">
+                    <div class="belt-card" onclick="openPhotoViewer(0)" tabindex="0" role="button" aria-label="View Photo 1">
+                        <img loading="lazy" src="img/Partnership1.jpg" alt="Matchday moment 1">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(1)" tabindex="0" role="button" aria-label="View Photo 2">
+                        <img loading="lazy" src="img/Partnership2.jpg" alt="Matchday moment 2">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(2)" tabindex="0" role="button" aria-label="View Photo 3">
+                        <img loading="lazy" src="img/Partnership3.jpg" alt="Matchday moment 3">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(3)" tabindex="0" role="button" aria-label="View Photo 4">
+                        <img loading="lazy" src="img/Partnership4.jpg" alt="Matchday moment 4">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(4)" tabindex="0" role="button" aria-label="View Photo 5">
+                        <img loading="lazy" src="img/Partnership5.jpg" alt="Matchday moment 5">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(5)" tabindex="0" role="button" aria-label="View Photo 6">
+                        <img loading="lazy" src="img/Partnership6.jpg" alt="Matchday moment 6">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(6)" tabindex="0" role="button" aria-label="View Photo 7">
+                        <img loading="lazy" src="img/Partnership7.jpg" alt="Matchday moment 7">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+
+                    <!-- Seamless clone for continuous loop -->
+                    <div class="belt-card" onclick="openPhotoViewer(0)" tabindex="0" role="button" aria-label="View Photo 1">
+                        <img loading="lazy" src="img/Partnership1.jpg" alt="Matchday moment 1">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(1)" tabindex="0" role="button" aria-label="View Photo 2">
+                        <img loading="lazy" src="img/Partnership2.jpg" alt="Matchday moment 2">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(2)" tabindex="0" role="button" aria-label="View Photo 3">
+                        <img loading="lazy" src="img/Partnership3.jpg" alt="Matchday moment 3">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(3)" tabindex="0" role="button" aria-label="View Photo 4">
+                        <img loading="lazy" src="img/Partnership4.jpg" alt="Matchday moment 4">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(4)" tabindex="0" role="button" aria-label="View Photo 5">
+                        <img loading="lazy" src="img/Partnership5.jpg" alt="Matchday moment 5">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(5)" tabindex="0" role="button" aria-label="View Photo 6">
+                        <img loading="lazy" src="img/Partnership6.jpg" alt="Matchday moment 6">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(6)" tabindex="0" role="button" aria-label="View Photo 7">
+                        <img loading="lazy" src="img/Partnership7.jpg" alt="Matchday moment 7">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <!-- Line 2: Sliding Right -->
+            <div class="belt-track-container belt-move-right" aria-label="Matchday photos line 2 sliding right">
+                <div class="belt-track">
+                    <div class="belt-card" onclick="openPhotoViewer(7)" tabindex="0" role="button" aria-label="View Photo 8">
+                        <img loading="lazy" src="img/Partnership8.jpg" alt="Matchday moment 8">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(8)" tabindex="0" role="button" aria-label="View Photo 9">
+                        <img loading="lazy" src="img/9Partnership9.png" alt="Matchday moment 9">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(9)" tabindex="0" role="button" aria-label="View Photo 10">
+                        <img loading="lazy" src="img/Partnership10.png" alt="Matchday moment 10">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(10)" tabindex="0" role="button" aria-label="View Photo 11">
+                        <img loading="lazy" src="img/Partnership11.png" alt="Matchday moment 11">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(11)" tabindex="0" role="button" aria-label="View Photo 12">
+                        <img loading="lazy" src="img/Partnership12.png" alt="Matchday moment 12">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(12)" tabindex="0" role="button" aria-label="View Photo 13">
+                        <img loading="lazy" src="img/Partnership13.png" alt="Matchday moment 13">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(13)" tabindex="0" role="button" aria-label="View Photo 14">
+                        <img loading="lazy" src="img/Partnership14.png" alt="Matchday moment 14">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+
+                    <!-- Seamless clone for continuous loop -->
+                    <div class="belt-card" onclick="openPhotoViewer(7)" tabindex="0" role="button" aria-label="View Photo 8">
+                        <img loading="lazy" src="img/Partnership8.jpg" alt="Matchday moment 8">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(8)" tabindex="0" role="button" aria-label="View Photo 9">
+                        <img loading="lazy" src="img/9Partnership9.png" alt="Matchday moment 9">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(9)" tabindex="0" role="button" aria-label="View Photo 10">
+                        <img loading="lazy" src="img/Partnership10.png" alt="Matchday moment 10">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(10)" tabindex="0" role="button" aria-label="View Photo 11">
+                        <img loading="lazy" src="img/Partnership11.png" alt="Matchday moment 11">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(11)" tabindex="0" role="button" aria-label="View Photo 12">
+                        <img loading="lazy" src="img/Partnership12.png" alt="Matchday moment 12">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(12)" tabindex="0" role="button" aria-label="View Photo 13">
+                        <img loading="lazy" src="img/Partnership13.png" alt="Matchday moment 13">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                    <div class="belt-card" onclick="openPhotoViewer(13)" tabindex="0" role="button" aria-label="View Photo 14">
+                        <img loading="lazy" src="img/Partnership14.png" alt="Matchday moment 14">
+                        <div class="belt-card-hover"><i class="fa fa-search-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Clean Image Lightbox Modal -->
+    <div class="photo-lightbox-overlay" id="photoLightboxModal" role="dialog" aria-modal="true" aria-hidden="true" onclick="handleLightboxBackdrop(event)">
+        <div class="photo-lightbox-container">
+            <div class="lightbox-header-bar">
+                <span class="lightbox-counter" id="lightboxCounter">Photo 1 of 14</span>
+                <button type="button" class="lightbox-close-btn" onclick="closePhotoViewer()" aria-label="Close photo view">&times;</button>
+            </div>
+            
+            <button type="button" class="lightbox-nav-btn prev" id="lightboxPrevBtn" onclick="prevPhoto()" aria-label="Previous photo">
+                <i class="fa fa-chevron-left"></i>
+            </button>
+
+            <div class="lightbox-image-stage">
+                <img id="lightboxMainImg" src="img/Partnership1.jpg" alt="Partnership Gallery Photo">
+            </div>
+
+            <button type="button" class="lightbox-nav-btn next" id="lightboxNextBtn" onclick="nextPhoto()" aria-label="Next photo">
+                <i class="fa fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
 
 		<!-- Treatment Process CTA -->
 		<section class="section" style="padding:80px 0;background:#fff;">
@@ -379,6 +522,7 @@
 											<li><a href="index.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
 											<li><a href="about.html"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
 											<li><a href="services.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+											<li><a href="processes.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Treatment Process</a></li>
 											<li><a href="portfolio-details.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Recovery Stories</a></li>
 											<li><a href="FAQ.html"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
 											<li><a href="contact.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
@@ -419,7 +563,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© 2026 Luyanda Buthelezi Physiotherapy | All Rights Reserved.</p>
+								<p>© 2026 Luyanda Buthelezi Physiotherapy | Practice No: 0720001171704 | HPCSA: PT 0154997</p>
 							</div>
 						</div>
 					</div>
@@ -430,20 +574,20 @@
 		<!--/ End Footer Area -->
 		
 		<!-- jQuery -->
-        <script src="js/jquery.min.js"></script>
-		<script src="js/jquery-migrate-3.0.0.js"></script>
-		<script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.min.js?v=2.5"></script>
+		<script src="js/jquery-migrate-3.0.0.js?v=2.5"></script>
+		<script src="js/jquery-ui.min.js?v=2.5"></script>
 		<!-- Popper & Bootstrap -->
-		<script src="js/popper.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
+		<script src="js/popper.min.js?v=2.5"></script>
+		<script src="js/bootstrap.min.js?v=2.5"></script>
 		<!-- Slicknav & Owl Carousel -->
-		<script src="js/owl-carousel.js"></script>
-		<!-- WOW.js -->
+		<script src="js/owl-carousel.js?v=2.5"></script>
 		<!-- LB Physiotherapy JS -->
-		<script src="js/main.js"></script>
-		<script src="js/navigation.js"></script>
-		<script src="js/appointment.js"></script>
-		<script src="js/scripts.js"></script>
+		<script src="js/main.js?v=2.5"></script>
+		<script src="js/navigation.js?v=2.5"></script>
+		<script src="js/appointment.js?v=2.5"></script>
+		<script src="js/scripts.js?v=2.5"></script>
+		<script src="js/animations.js?v=2.5"></script>
 
 		<div class="appointment-modal" id="appointmentModal">
 			<div class="modal-overlay" onclick="closeAppointmentModal()"></div>
@@ -489,6 +633,85 @@
 				</form>
 			</div>
 		</div>
+
+		<!-- Photo Lightbox Controller -->
+		<script>
+		var partnershipPhotos = [
+			{ src: "img/Partnership1.jpg", alt: "LB Physiotherapy × The Wanderers Club Photo 1" },
+			{ src: "img/Partnership2.jpg", alt: "LB Physiotherapy × The Wanderers Club Photo 2" },
+			{ src: "img/Partnership3.jpg", alt: "LB Physiotherapy × The Wanderers Club Photo 3" },
+			{ src: "img/Partnership4.jpg", alt: "LB Physiotherapy × The Wanderers Club Photo 4" },
+			{ src: "img/Partnership5.jpg", alt: "LB Physiotherapy × The Wanderers Club Photo 5" },
+			{ src: "img/Partnership6.jpg", alt: "LB Physiotherapy × The Wanderers Club Photo 6" },
+			{ src: "img/Partnership7.jpg", alt: "LB Physiotherapy × The Wanderers Club Photo 7" },
+			{ src: "img/Partnership8.jpg", alt: "LB Physiotherapy × The Wanderers Club Photo 8" },
+			{ src: "img/9Partnership9.png", alt: "LB Physiotherapy × The Wanderers Club Photo 9" },
+			{ src: "img/Partnership10.png", alt: "LB Physiotherapy × The Wanderers Club Photo 10" },
+			{ src: "img/Partnership11.png", alt: "LB Physiotherapy × The Wanderers Club Photo 11" },
+			{ src: "img/Partnership12.png", alt: "LB Physiotherapy × The Wanderers Club Photo 12" },
+			{ src: "img/Partnership13.png", alt: "LB Physiotherapy × The Wanderers Club Photo 13" },
+			{ src: "img/Partnership14.png", alt: "LB Physiotherapy × The Wanderers Club Photo 14" }
+		];
+
+		var currentPhotoIndex = 0;
+
+		function openPhotoViewer(index) {
+			if (index < 0 || index >= partnershipPhotos.length) return;
+			currentPhotoIndex = index;
+			var photo = partnershipPhotos[index];
+			
+			var img = document.getElementById('lightboxMainImg');
+			if (img) {
+				img.src = photo.src;
+				img.alt = photo.alt;
+			}
+			
+			var counter = document.getElementById('lightboxCounter');
+			if (counter) {
+				counter.textContent = 'Photo ' + (index + 1) + ' of ' + partnershipPhotos.length;
+			}
+			
+			var modal = document.getElementById('photoLightboxModal');
+			if (modal) {
+				modal.classList.add('open');
+				modal.setAttribute('aria-hidden', 'false');
+				document.body.style.overflow = 'hidden';
+			}
+		}
+
+		function closePhotoViewer() {
+			var modal = document.getElementById('photoLightboxModal');
+			if (!modal) return;
+			modal.classList.remove('open');
+			modal.setAttribute('aria-hidden', 'true');
+			document.body.style.overflow = '';
+		}
+
+		function handleLightboxBackdrop(e) {
+			if (e.target && (e.target.id === 'photoLightboxModal' || e.target.classList.contains('photo-lightbox-overlay'))) {
+				closePhotoViewer();
+			}
+		}
+
+		function nextPhoto() {
+			currentPhotoIndex = (currentPhotoIndex + 1) % partnershipPhotos.length;
+			openPhotoViewer(currentPhotoIndex);
+		}
+
+		function prevPhoto() {
+			currentPhotoIndex = (currentPhotoIndex - 1 + partnershipPhotos.length) % partnershipPhotos.length;
+			openPhotoViewer(currentPhotoIndex);
+		}
+
+		document.addEventListener('keydown', function(e) {
+			var modal = document.getElementById('photoLightboxModal');
+			if (modal && modal.classList.contains('open')) {
+				if (e.key === 'Escape') closePhotoViewer();
+				if (e.key === 'ArrowRight') nextPhoto();
+				if (e.key === 'ArrowLeft') prevPhoto();
+			}
+		});
+		</script>
 
     </body>
 </html>

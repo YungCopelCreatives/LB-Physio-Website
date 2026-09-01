@@ -5,11 +5,15 @@
 
 /* ==================== HERO SLIDER ==================== */
 .slider .single-slider {
-  height: 680px;
+  min-height: clamp(480px, 68vh, 620px);
+  height: auto;
+  padding: 130px 0 110px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .slider .single-slider::before {
   content: '';
@@ -18,86 +22,110 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, rgba(0,0,0,0.55), rgba(0,0,0,0.15));
+  background: linear-gradient(180deg, rgba(15,23,42,0.65) 0%, rgba(15,23,42,0.38) 45%, rgba(15,23,42,0.85) 100%), linear-gradient(90deg, rgba(15,23,42,0.7) 0%, rgba(15,23,42,0.25) 100%);
   z-index: 1;
   pointer-events: none;
 }
 .slider .single-slider .text {
-  margin-top: 140px;
+  margin-top: 0;
+  padding-top: 0;
   position: relative;
   z-index: 2;
 }
 .slider.index2 .single-slider .text {
-  margin-top: 140px;
+  margin-top: 0;
 }
 .slider .single-slider h1 {
   color: #fff;
-  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-size: clamp(2rem, 3.8vw, 3.5rem);
   font-weight: 700;
   margin: 0;
   padding: 0;
-  line-height: 1.08;
-  letter-spacing: -0.03em;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-  max-width: 750px;
+  line-height: 1.15;
+  letter-spacing: -0.028em;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.45);
+  max-width: 720px;
 }
 .slider .single-slider h1 span {
   color: #fff;
 }
 .slider .single-slider p {
-  color: rgba(255,255,255,0.9);
-  margin-top: 24px;
+  color: rgba(255,255,255,0.92);
+  margin-top: 16px;
   font-weight: 400;
-  font-size: 19px;
-  line-height: 1.7;
-  max-width: 560px;
-  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  line-height: 1.6;
+  max-width: 580px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.35);
 }
 .slider .single-slider .button {
-  margin-top: 40px;
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
   position: relative;
-  z-index: 2;
+  z-index: 10;
+  opacity: 1;
+  visibility: visible;
 }
 .slider .single-slider .btn {
   color: #ffffff;
-  background: rgba(255,255,255,0.15);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  font-weight: 500;
-  display: inline-block;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  margin-right: 12px;
-  padding: 16px 36px;
+  padding: 14px 30px;
   font-size: 15px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  -webkit-tap-highlight-color: transparent;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+  visibility: visible;
 }
 .slider .single-slider .btn:last-child {
   margin: 0;
 }
 .slider .single-slider .btn.primary {
   background: #258AA7;
-  border-color: transparent;
-  color: #fff;
+  border: 1.5px solid #258AA7;
+  color: #ffffff;
+  box-shadow: 0 4px 18px rgba(37, 138, 167, 0.5);
 }
 .slider .single-slider .btn.primary::before {
   background: #1e7a96;
 }
+.slider .single-slider .btn.primary:hover {
+  background: #1e7a96;
+  border-color: #1e7a96;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 138, 167, 0.6);
+}
 .slider .single-slider .btn.btn-outline-white {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.3);
-  color: #fff;
-  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.5);
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  color: #ffffff;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 }
 .slider .single-slider .btn.btn-outline-white:hover {
-  background: rgba(255,255,255,0.25);
-  border-color: rgba(255,255,255,0.5);
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #1D1D1F;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 .slider .single-slider .btn:hover {
-  background: #258AA7;
-  border-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(37,138,167,0.35);
 }
 .slider .owl-carousel .owl-nav {
   margin: 0;
@@ -161,26 +189,23 @@
 
 /* Text reveal animation */
 .owl-item.active .single-slider h1 {
-  animation: heroTextReveal 0.6s cubic-bezier(0.25, 1, 0.5, 1) both 0.2s;
+  animation: heroTextReveal 0.5s cubic-bezier(0.25, 1, 0.5, 1) both 0.1s;
 }
 .owl-item.active .single-slider p {
-  animation: heroTextReveal 0.6s cubic-bezier(0.25, 1, 0.5, 1) both 0.5s;
+  animation: heroTextReveal 0.5s cubic-bezier(0.25, 1, 0.5, 1) both 0.25s;
 }
 .owl-item.active .single-slider .button {
-  animation: heroTextReveal 0.6s cubic-bezier(0.25, 1, 0.5, 1) both 0.8s;
+  animation: heroTextReveal 0.5s cubic-bezier(0.25, 1, 0.5, 1) both 0.35s;
 }
 @keyframes heroTextReveal {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0.2; transform: translateY(16px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Background slow zoom while slide is active */
+/* Steady slide background without zoom */
 .owl-item.active .single-slider {
-  animation: heroZoom 6s ease-out both;
-}
-@keyframes heroZoom {
-  from { transform: scale(1); }
-  to   { transform: scale(1.04); }
+  animation: none;
+  transform: none;
 }
 
 /* Parallax on hero background */
@@ -204,10 +229,12 @@
 
 /* ==================== SCHEDULE ==================== */
 .schedule {
-  background: #FAFAFA;
+  background: transparent;
   margin: 0;
   padding: 0;
-  min-height: 230px;
+  position: relative;
+  z-index: 20;
+  margin-top: -120px;
 }
 .schedule .row {
   display: flex;
@@ -228,8 +255,10 @@
   position: relative;
   text-align: left;
   z-index: 3;
-  border-radius: 28px;
-  background: #1D1D1F;
+  border-radius: 20px;
+  background: #1A365D;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -237,6 +266,15 @@
   -moz-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   min-height: 280px;
+}
+.schedule .single-schedule.first {
+  background: #152844;
+}
+.schedule .single-schedule.middle {
+  background: #258AA7;
+}
+.schedule .single-schedule.last {
+  background: #1A365D;
 }
 .schedule .single-schedule .single-content {
   flex: 1;
@@ -246,23 +284,13 @@
   position: relative;
   padding: 32px;
   z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .schedule .single-schedule::before {
-  position: absolute;
-  z-index: -1;
-  content: '';
-  bottom: -10px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 80%;
-  height: 90%;
-  background: #1D1D1F;
-  opacity: 0;
-  filter: blur(10px);
-  -webkit-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  -moz-transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  display: none;
 }
 .schedule .single-schedule:hover::before {
   opacity: 0.3;
@@ -1473,6 +1501,87 @@
 .partnership-bottom-bar-link:hover {
   color: #fff;
 }
+/* ==================== GLOBAL STANDARDIZED ICON SIZING ==================== */
+/* Standard Icon Sizing System: Micro (12px), Small (14-16px), Medium (20-24px), Large (32-40px), Hero/Card (48-56px) */
+i.fa, i.fas, i.far, i.fab, i.icofont {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+}
+
+/* Header & Topbar Icons */
+.header .top-contact li i,
+.header .top-link li i {
+  font-size: 14px;
+  width: 16px;
+  height: 16px;
+}
+.header .nav li a i {
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+/* Button & Link Arrow Icons */
+.btn i, .btn-cta i {
+  font-size: 14px;
+  margin-left: 6px;
+}
+.breadcrumbs .bread-list li i {
+  font-size: 12px;
+  width: 14px;
+}
+
+/* Feature & Service Card Icons */
+.services .single-service > i:first-child,
+.single-features .single-icon i,
+.value-card .value-icon i {
+  font-size: 36px;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+}
+.services .single-service .details ul li i {
+  font-size: 11px;
+  width: 14px;
+  height: 14px;
+}
+
+/* Contact Us Info Box Icons */
+.contact-us .single-info i {
+  font-size: 32px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* Footer & Social Icons */
+.footer .social li a i,
+.single-footer .social li a i {
+  font-size: 16px;
+  width: 20px;
+  height: 20px;
+}
+.footer .single-footer .quick-links li a i {
+  font-size: 12px;
+  margin-right: 6px;
+}
+
+/* FAQ / Accordion Chevron Icons */
+.faq-item h5 i,
+.accordion li a i {
+  font-size: 14px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Modal Icons */
+.modal-content .close-modal {
+  font-size: 24px;
+  line-height: 1;
+}
+
 @media (max-width: 768px) {
   .partnership-bottom-bar-inner {
     flex-direction: column;
@@ -1483,3 +1592,5 @@
     height: 28px;
   }
 }
+
+

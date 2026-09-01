@@ -1,5 +1,6 @@
 {
   "name": "LB Physiotherapy",
   "description": "Website for Luyanda Buthelezi Physiotherapy practice in Northriding, Randburg.",
-  "capabilities": []
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

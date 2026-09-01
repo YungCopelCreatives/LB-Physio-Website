@@ -35,7 +35,23 @@
   /* =====================================
      WhatsApp Form Submission
      — Double-submit prevention
+     — Standardized professional WhatsApp template
   =======================================*/
+  function formatWhatsAppAppointment(data) {
+    return '*New Appointment Request - LB Physiotherapy*\n' +
+      '------------------------------------\n' +
+      '• *Patient Name:* ' + (data.name || 'Not provided') + '\n' +
+      '• *Phone:* ' + (data.phone || 'Not provided') + '\n' +
+      (data.email ? '• *Email:* ' + data.email + '\n' : '') +
+      '• *Service / Condition:* ' + (data.service || 'General Assessment') + '\n' +
+      '• *Preferred Date:* ' + (data.date || 'Earliest Available') + '\n' +
+      (data.time ? '• *Preferred Time:* ' + data.time + '\n' : '') +
+      (data.message ? '• *Notes / Symptoms:* ' + data.message + '\n' : '') +
+      '------------------------------------\n' +
+      '_Practice No: 0720001171704 | HPCSA: PT 0154997_';
+  }
+
+  // Modal Appointment Form
   $(document).on('submit', '#modalAppointmentForm', function(event) {
     event.preventDefault();
     var form = this;
@@ -43,21 +59,54 @@
     if (submitBtn && submitBtn.disabled) return;
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
+      submitBtn.textContent = 'Redirecting to WhatsApp...';
     }
     var fd = new FormData(form);
-    var msg = 'Appointment Request:\n' +
-      'Name: ' + fd.get('name') + '\n' +
-      'Email: ' + fd.get('email') + '\n' +
-      'Phone: ' + fd.get('phone') + '\n' +
-      'Service: ' + fd.get('service') + '\n' +
-      'Date: ' + fd.get('date') + '\n' +
-      'Message: ' + fd.get('message');
+    var data = {
+      name: fd.get('name'),
+      email: fd.get('email'),
+      phone: fd.get('phone'),
+      service: fd.get('service'),
+      date: fd.get('date'),
+      time: fd.get('time'),
+      message: fd.get('message')
+    };
+    var msg = formatWhatsAppAppointment(data);
     window.location.href = 'https://wa.me/27739480811?text=' + encodeURIComponent(msg);
     setTimeout(function() {
       if (submitBtn) {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Request Appointment';
+      }
+    }, 3000);
+  });
+
+  // Homepage Appointment Form
+  $(document).on('submit', '#homeAppointmentForm', function(event) {
+    event.preventDefault();
+    var form = this;
+    var submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn && submitBtn.disabled) return;
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Redirecting to WhatsApp...';
+    }
+    var fd = new FormData(form);
+    var data = {
+      name: fd.get('name'),
+      email: fd.get('email'),
+      phone: fd.get('phone'),
+      service: fd.get('service'),
+      date: fd.get('date'),
+      time: fd.get('time'),
+      message: fd.get('message')
+    };
+    var msg = formatWhatsAppAppointment(data);
+    window.location.href = 'https://wa.me/27739480811?text=' + encodeURIComponent(msg);
+    setTimeout(function() {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Book An Appointment';
       }
     }, 3000);
   });
