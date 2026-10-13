@@ -178,15 +178,17 @@
       }
     });
 
-    // Highlight active page automatically
-    var currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    if (currentPath === '') currentPath = 'index.html';
+    // Highlight active page automatically with clean URL support
+    var rawPath = window.location.pathname.replace(/^\/+|\/+$/g, '').toLowerCase();
+    var currentPath = rawPath.replace(/\.html$/, '');
+    if (currentPath === '' || currentPath === 'index') currentPath = '';
     
     $('.header .nav li, .mobile-menu-panel .mobile-nav-links li').each(function() {
       var href = $(this).find('a').attr('href');
       if (href) {
-        var page = href.split('/').pop().split('#')[0];
-        if (page === currentPath) {
+        var linkTarget = href.split('#')[0].replace(/^\/+|\/+$/g, '').toLowerCase().replace(/\.html$/, '');
+        if (linkTarget === 'index') linkTarget = '';
+        if (linkTarget === currentPath || (currentPath === 'portfolio-details' && linkTarget === 'recovery-stories')) {
           $(this).addClass('active');
         }
       }

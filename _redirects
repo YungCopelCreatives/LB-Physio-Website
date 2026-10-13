@@ -1,0 +1,16 @@
+/index.html / 301
+/about.html /about 301
+/services.html /services 301
+/contact.html /contact 301
+/appointment.html /appointment 301
+/portfolio-details.html /portfolio-details 301
+/processes.html /processes 301
+/FAQ.html /faq 301
+/privacy.html /privacy 301
+/terms.html /terms 301
+/mail-success.html /mail-success 301
+
+/recovery-stories /portfolio-details.html 200
+/faq /FAQ.html 200
+
+/* /404.html 404

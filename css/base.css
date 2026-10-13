@@ -240,12 +240,12 @@ ul, ul li {
 
 /* ==================== SECTIONS ==================== */
 .section {
-  padding: 140px 0;
+  padding: 80px 0;
 }
 .section-title {
   text-align: center;
-  margin-bottom: 64px;
-  padding: 0 80px;
+  margin-bottom: 48px;
+  padding: 0 20px;
 }
 .section-title h2 {
   font-size: clamp(2rem, 4vw, 3rem);

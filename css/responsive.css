@@ -27,6 +27,7 @@
   .breadcrumbs {
     padding: 80px 0;
   }
+  .breadcrumbs h1,
   .breadcrumbs h2 {
     font-size: 28px;
     font-weight: 600;
@@ -196,7 +197,8 @@
     align-items: center;
     position: relative;
   }
-  .slider .single-slider h1 {
+  .slider .single-slider h1,
+  .slider .single-slider h2.slide-heading {
     font-size: clamp(1.85rem, 3.4vw, 2.4rem);
     font-weight: 700;
     line-height: 1.15;
@@ -431,8 +433,9 @@
   }
   /* Card grid responsive */
   .card-grid {
-    grid-template-columns: 1fr;
-    padding: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px 24px;
+    gap: 24px;
   }
   /* Mobile menu — show burger on tablet */
   .header .main-menu {
@@ -440,12 +443,6 @@
   }
   .header .get-quote .btn {
     display: inline-block;
-  }
-  .pricing-table .row.justify-content-center {
-    flex-direction: column;
-  }
-  .pricing-table .col-lg-4 {
-    width: 100%;
   }
 }
 
@@ -591,6 +588,7 @@
   .breadcrumbs {
     padding: 60px 0;
   }
+  .breadcrumbs h1,
   .breadcrumbs h2 {
     font-size: 24px;
     font-weight: 600;
@@ -631,7 +629,8 @@
   .slider .single-slider::before {
     background: linear-gradient(180deg, rgba(15,23,42,0.72) 0%, rgba(15,23,42,0.48) 42%, rgba(15,23,42,0.9) 100%), linear-gradient(90deg, rgba(15,23,42,0.75) 0%, rgba(15,23,42,0.35) 100%);
   }
-  .slider .single-slider h1 {
+  .slider .single-slider h1,
+  .slider .single-slider h2.slide-heading {
     font-size: clamp(1.48rem, 5.4vw, 2.05rem);
     font-weight: 700;
     line-height: 1.18;
@@ -1138,7 +1137,8 @@
     min-height: clamp(340px, 54vh, 420px);
     padding: 72px 0 25px;
   }
-  .slider .single-slider h1 {
+  .slider .single-slider h1,
+  .slider .single-slider h2.slide-heading {
     font-size: clamp(1.35rem, 5.8vw, 1.75rem);
     line-height: 1.2;
   }
@@ -1172,7 +1172,8 @@
     min-height: 320px;
     padding: 65px 0 20px;
   }
-  .slider .single-slider h1 {
+  .slider .single-slider h1,
+  .slider .single-slider h2.slide-heading {
     font-size: 1.25rem;
   }
   .slider .single-slider p {
@@ -1188,6 +1189,7 @@
     min-width: 100px;
   }
   .breadcrumbs { padding: 60px 0; }
+  .breadcrumbs h1,
   .breadcrumbs h2 { font-size: 22px; }
   .single-schedule .inner { padding: 20px; }
   .single-table { padding: 32px 20px 24px; min-height: auto; }
@@ -1204,7 +1206,8 @@
     min-height: 360px;
     padding: 70px 0 30px;
   }
-  .slider .single-slider h1 {
+  .slider .single-slider h1,
+  .slider .single-slider h2.slide-heading {
     font-size: 1.6rem;
   }
   .slider .single-slider p {

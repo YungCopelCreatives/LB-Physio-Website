@@ -15,11 +15,24 @@
     <title>Book a Physio Appointment Northriding | LB Physiotherapy</title>
     
     <!-- Canonical -->
-    <link rel="canonical" href="https://www.lbphysiotherapy.co.za/appointment.html">
+    <link rel="canonical" href="https://www.lbphysiotherapy.co.za/appointment">
     
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.png" type="image/png">
     <meta name="theme-color" content="#258AA7">
+
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:title" content="Book a Physio Appointment Northriding | LB Physiotherapy">
+    <meta property="og:description" content="Book your physio consultation with HPCSA-registered physiotherapist Luyanda Buthelezi in Northriding, Randburg. Practice No: 0720001171704.">
+    <meta property="og:url" content="https://www.lbphysiotherapy.co.za/appointment">
+    <meta property="og:image" content="https://www.lbphysiotherapy.co.za/img/slider.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Book a Physio Appointment Northriding | LB Physiotherapy">
+    <meta name="twitter:description" content="Book your physio consultation with HPCSA-registered physiotherapist Luyanda Buthelezi in Northriding, Randburg.">
+    <meta name="twitter:image" content="https://www.lbphysiotherapy.co.za/img/slider.jpg">
     
     <!-- CSS Architecture -->
     <link rel="stylesheet" href="css/bootstrap.min.css?v=2.5">
@@ -57,7 +70,7 @@
             {
                 "@type": "OpeningHoursSpecification",
                 "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-                "opens": "14:00",
+                "opens": "08:00",
                 "closes": "18:00"
             },
             {
@@ -76,7 +89,7 @@
 
     <style>
         .appointment-page-section {
-            padding: 4rem 0 5rem;
+            padding: 80px 0;
             background: #F8FBFC;
         }
 
@@ -196,6 +209,18 @@
         .info-sidebar-box h4 i {
             color: #258AA7;
         }
+
+        @media (max-width: 768px) {
+            .appointment-page-section {
+                padding: 50px 0;
+            }
+            .booking-card {
+                padding: 1.5rem 1.25rem;
+            }
+            .info-sidebar-box {
+                padding: 1.5rem 1.25rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -223,9 +248,9 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-5 col-12">
                         <ul class="top-link">
-                            <li><a href="FAQ.html">FAQ</a></li>
-                            <li><a href="terms.html">Terms of Service</a></li>
-                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/terms">Terms of Service</a></li>
+                            <li><a href="/privacy">Privacy Policy</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-6 col-md-7 col-12">
@@ -245,7 +270,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3 col-md-3 col-12">
                             <div class="logo">
-                                <a href="index.html"><img src="img/logo.png" alt="Luyanda Buthelezi Physiotherapy"></a>
+                                <a href="/"><img src="img/logo.png" alt="Luyanda Buthelezi Physiotherapy"></a>
                             </div>
                             <div class="mobile-nav">
                                 <button class="navbar-toggler" type="button" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenuPanel">
@@ -257,18 +282,18 @@
                             <div class="main-menu">
                                 <nav class="navigation" aria-label="Main Navigation">
                                     <ul class="nav menu">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="portfolio-details.html">Recovery Stories</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/about">About</a></li>
+                                        <li><a href="/services">Services</a></li>
+                                        <li><a href="/portfolio-details">Recovery Stories</a></li>
+                                        <li><a href="/contact">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="col-lg-2 col-12">
                             <div class="get-quote">
-                                <a href="appointment.html" class="btn" aria-label="Book Appointment">Book Appointment</a>
+                                <a href="/appointment" class="btn" aria-label="Book Appointment">Book Appointment</a>
                             </div>
                         </div>
                     </div>
@@ -288,14 +313,14 @@
 				</button>
 			</div>
 			<ul class="mobile-nav-links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="services.html">Services</a></li>
-				<li><a href="portfolio-details.html">Recovery Stories</a></li>
-				<li><a href="contact.html">Contact Us</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/services">Services</a></li>
+				<li><a href="/portfolio-details">Recovery Stories</a></li>
+				<li><a href="/contact">Contact Us</a></li>
 			</ul>
 			<div class="mobile-menu-cta">
-				<a href="#" class="btn" onclick="openAppointmentModal(event)">Book Appointment</a>
+				<a href="#main-content" class="btn" onclick="closeMobileMenu()">Book Appointment</a>
 			</div>
 						<div class="mobile-menu-footer">
 				<div class="mobile-contact-info">
@@ -316,7 +341,7 @@
                     <div class="col-12">
                         <h2>Schedule Your Consultation</h2>
                         <ul class="bread-list">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><i class="icofont-simple-right"></i></li>
                             <li class="active">Book Appointment</li>
                         </ul>
@@ -402,8 +427,10 @@
                                         <label for="app_time">Preferred Time Slot *</label>
                                         <select id="app_time" name="time" required aria-label="Preferred Time">
                                             <option value="" disabled selected>Select Time Slot</option>
-                                            <option value="Mon-Fri After-hours (14:00 - 16:00)">Mon-Fri (14:00 - 16:00)</option>
-                                            <option value="Mon-Fri Evening (16:00 - 18:00)">Mon-Fri (16:00 - 18:00)</option>
+                                            <option value="Mon-Fri Morning (08:00 - 11:00)">Mon-Fri Morning (08:00 - 11:00)</option>
+                                            <option value="Mon-Fri Midday (11:00 - 14:00)">Mon-Fri Midday (11:00 - 14:00)</option>
+                                            <option value="Mon-Fri Afternoon (14:00 - 16:00)">Mon-Fri Afternoon (14:00 - 16:00)</option>
+                                            <option value="Mon-Fri Evening (16:00 - 18:00)">Mon-Fri Evening (16:00 - 18:00)</option>
                                             <option value="Saturday Morning (08:00 - 11:00)">Saturday Morning (08:00 - 11:00)</option>
                                             <option value="Saturday Midday (11:00 - 14:00)">Saturday Midday (11:00 - 14:00)</option>
                                         </select>
@@ -430,7 +457,7 @@
                     <div class="info-sidebar-box">
                         <h4><i class="fa fa-clock"></i> Practice Hours</h4>
                         <ul class="time-sidual" style="list-style:none;padding:0;margin:0;">
-                            <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;"><strong>Mon – Fri</strong> <span>14:00 – 18:00</span></li>
+                            <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;"><strong>Mon – Fri</strong> <span>08:00 – 18:00</span></li>
                             <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f0f0f0;"><strong>Saturday</strong> <span>08:00 – 14:00</span></li>
                             <li style="display:flex;justify-content:space-between;padding:8px 0;color:#e63946;"><strong>Sunday</strong> <span>Closed</span></li>
                         </ul>
@@ -440,13 +467,14 @@
                         <h4><i class="fa fa-location-dot"></i> Practice Location</h4>
                         <p style="margin-bottom:0.5rem;font-weight:600;color:#1F2B37;">23 Market Street, Randburg, Gauteng, 2188</p>
                         <p class="text-muted small">Conveniently accessible from Northriding, Fairland, Fourways, Douglasdale, and Bryanston.</p>
-                        <a href="contact.html" class="btn btn-outline-primary btn-sm btn-block mt-2">View Full Map & Directions</a>
+                        <a href="/contact" class="btn btn-outline-primary btn-sm btn-block mt-2">View Full Map & Directions</a>
                     </div>
 
                     <div class="info-sidebar-box">
                         <h4><i class="fa fa-circle-question"></i> Need Help First?</h4>
-                        <p class="text-muted small">Curious about how your first consultation and assessment works?</p>
-                        <a href="processes.html" class="text-primary font-weight-bold">View Our 4-Step Treatment Process →</a>
+                        <p class="text-muted small mb-2">Explore our specialized rehabilitation services or understand how we structure your assessment:</p>
+                        <p class="mb-1"><a href="/services" class="text-primary font-weight-bold">View Specialized Services & Pricing →</a></p>
+                        <p class="mb-0"><a href="/processes" class="text-primary font-weight-bold">View Our 4-Step Treatment Process →</a></p>
                     </div>
                 </div>
             </div>
@@ -476,22 +504,22 @@
                         <div class="single-footer f-link">
                             <h2>Quick Links</h2>
                             <ul>
-                                <li><a href="index.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
-                                <li><a href="about.html"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
-                                <li><a href="services.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
-                                <li><a href="processes.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Treatment Process</a></li>
-                                <li><a href="portfolio-details.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Recovery Stories</a></li>
-                                <li><a href="FAQ.html"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
-                                <li><a href="contact.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
+                                <li><a href="/"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
+                                <li><a href="/about"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
+                                <li><a href="/services"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
+                                <li><a href="/processes"><i class="fa fa-caret-right" aria-hidden="true"></i>Treatment Process</a></li>
+                                <li><a href="/portfolio-details"><i class="fa fa-caret-right" aria-hidden="true"></i>Recovery Stories</a></li>
+                                <li><a href="/faq"><i class="fa fa-caret-right" aria-hidden="true"></i>FAQ</a></li>
+                                <li><a href="/contact"><i class="fa fa-caret-right" aria-hidden="true"></i>Contact Us</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="single-footer">
                             <h2>Open Hours</h2>
-                            <p>After-hours physiotherapy care in Northriding & Randburg.</p>
+                            <p>Comprehensive physiotherapy care in Northriding & Randburg.</p>
                             <ul class="time-sidual">
-                                <li class="day">Monday - Friday <span>14:00 - 18:00</span></li>
+                                <li class="day">Monday - Friday <span>08:00 - 18:00</span></li>
                                 <li class="day">Saturday <span>08:00 - 14:00</span></li>
                                 <li class="day">Sunday <span>Closed</span></li>
                             </ul>

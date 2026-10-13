@@ -188,12 +188,41 @@
   };
 
   /* =====================================
-     Gallery Card Toggle
+     Gallery Card Toggle (Case Studies)
   =======================================*/
   window.toggleDetails = function(button) {
-    var card = button.closest('.service-card');
-    var details = card.querySelector('.details');
-    details.classList.toggle('active');
+    if (!button) return;
+    var controlsId = button.getAttribute('aria-controls');
+    var details = controlsId ? document.getElementById(controlsId) : null;
+    if (!details) {
+      var card = button.closest('.service-card');
+      if (card) {
+        details = card.querySelector('.details');
+      }
+    }
+    if (!details) return;
+
+    var isExpanded = button.getAttribute('aria-expanded') === 'true' || 
+                     details.classList.contains('open') || 
+                     details.classList.contains('active');
+
+    if (isExpanded) {
+      details.classList.remove('open', 'active');
+      details.setAttribute('aria-hidden', 'true');
+      button.setAttribute('aria-expanded', 'false');
+      var btnText = button.querySelector('.btn-text');
+      if (btnText) {
+        btnText.textContent = 'View Case Study';
+      }
+    } else {
+      details.classList.add('open', 'active');
+      details.setAttribute('aria-hidden', 'false');
+      button.setAttribute('aria-expanded', 'true');
+      var btnText = button.querySelector('.btn-text');
+      if (btnText) {
+        btnText.textContent = 'Hide Case Study';
+      }
+    }
   };
 
 })(jQuery);

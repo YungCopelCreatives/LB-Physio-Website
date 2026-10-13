@@ -133,6 +133,20 @@
       $("#datepicker").datepicker();
     }
 
+    /* =====================================
+       Floating WhatsApp Action Widget
+    =======================================*/
+    if (!$('#whatsapp-float').length) {
+      $('body').append(
+        '<a href="https://wa.me/27739480811?text=Hi%20LB%20Physiotherapy%2C%20I%20would%20like%20to%20inquire%20about%20an%20appointment" ' +
+        'class="whatsapp-float-btn" id="whatsapp-float" target="_blank" rel="noopener noreferrer" ' +
+        'aria-label="Chat with LB Physiotherapy on WhatsApp">' +
+        '<i class="fa-brands fa-whatsapp" aria-hidden="true"></i>' +
+        '<span class="whatsapp-tooltip">Chat on WhatsApp</span>' +
+        '</a>'
+      );
+    }
+
   });
 
   /* =====================================

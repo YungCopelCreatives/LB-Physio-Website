@@ -19,5 +19,5 @@ Emails:
 - General / Info: info@lbphysiotherapy.co.za
 - Practice Manager (Arne): arne@lbphysiotherapy.co.za
 - Physiotherapist (Luyanda): luyanda@lbphysiotherapy.co.za
-Book: https://www.lbphysiotherapy.co.za/appointment.html
+Book: https://www.lbphysiotherapy.co.za/appointment
 Google: https://share.google/iWOIVCzx5bWQO6lU6

@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate required fields
     if (empty($name) || empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        header("Location: ../contact.html?status=error");
+        header("Location: ../contact?status=error");
         exit;
     }
 
@@ -34,14 +34,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email_headers .= "X-Mailer: PHP/" . phpversion();
 
     if (mail($recipient, $email_subject, $email_content, $email_headers)) {
-        header("Location: ../mail-success.html");
+        header("Location: ../mail-success");
         exit;
     } else {
-        header("Location: ../contact.html?status=server_error");
+        header("Location: ../contact?status=server_error");
         exit;
     }
 } else {
-    header("Location: ../contact.html");
+    header("Location: ../contact");
     exit;
 }
 ?>
