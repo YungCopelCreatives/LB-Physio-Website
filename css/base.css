@@ -317,7 +317,7 @@ ul, ul li {
 .breadcrumbs {
   background-image: url('../img/slider.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   position: relative;
