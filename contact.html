@@ -128,8 +128,9 @@
 				<div class="mobile-contact-info">
 					<a href="tel:+27739480811"><i class="fa fa-phone"></i> +27 (0)73 948 0811</a>
 					<a href="mailto:info@lbphysiotherapy.co.za"><i class="fa fa-envelope"></i> info@lbphysiotherapy.co.za</a>
-					<a href="mailto:arne@lbphysiotherapy.co.za"><i class="fa fa-user"></i> arne@lbphysiotherapy.co.za (Practice Manager)</a>
+					<a href="mailto:info@lbphysiotherapy.co.za"><i class="fa fa-user"></i> Nonzima Mazibuko (Practice Manager)</a>
 					<a href="mailto:luyanda@lbphysiotherapy.co.za"><i class="fa fa-user-md"></i> luyanda@lbphysiotherapy.co.za (Physiotherapist)</a>
+					<a href="https://www.tiktok.com/@lbutheleziphysiotherapy?_r=1&amp;_t=ZS-9B5q4aeT4OF" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i> @lbutheleziphysiotherapy (TikTok)</a>
 				</div>
 			</div>
 		</div>
@@ -161,7 +162,7 @@
 						<div class="col-lg-6">
 							<div class="contact-us-left">
 								<div class="map-container">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.4504941528444!2d27.9767251!3d-26.051529799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9574323d6355e9%3A0x4c6b6b6b6b6b6b6b!2s23%20Market%20St%2C%20Randburg%2C%202188!5e0!3m2!1sen!2sza!4v1627564800000" height="434" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+									<iframe src="https://www.google.com/maps?q=23+Market+Street,+Randburg,+2188,+South+Africa&output=embed" height="434" style="border:0;" allowfullscreen="" loading="lazy" title="LB Physiotherapy location"></iframe>
 								</div>
 							</div>
 						</div>
@@ -169,7 +170,8 @@
 							<div class="contact-us-form">
 								<h2>Contact With Us</h2>
 								<p>If you have any questions, please feel free to contact us.</p>
-								<form class="form" method="post" action="mail/mail.php">
+								<div id="contactStatusAlert" style="display:none; margin-bottom:18px; padding:12px 16px; border-radius:8px; font-size:14px; line-height:1.5;"></div>
+								<form class="form" id="mainContactForm" method="post" action="mail/mail.php">
 									<div class="row">
 										<div class="col-lg-6">
 											<div class="form-group">
@@ -200,6 +202,7 @@
 											<div class="form-group login-btn">
 												<button class="btn" type="submit">Send</button>
 											</div>
+											<div id="contactFormError" style="display:none; margin-top:14px; padding:10px 14px; border-radius:6px; background:#fff5f5; border:1px solid #feb2b2; color:#c53030; font-size:14px; font-weight:500;"></div>
 										</div>
 									</div>
 								</form>
@@ -239,12 +242,13 @@
 											<i class="fa fa-chevron-down toggle-icon"></i>
 										</button>
 										<div class="email-collapse-content" id="staffEmailsCollapse">
-											<p><a href="mailto:arne@lbphysiotherapy.co.za"><i class="fa fa-user" style="font-size:12px;margin-right:4px;"></i>arne@lbphysiotherapy.co.za</a> <span class="role-badge">(Practice Manager)</span></p>
+											<p><a href="mailto:info@lbphysiotherapy.co.za"><i class="fa fa-user" style="font-size:12px;margin-right:4px;"></i>Nonzima Mazibuko (Practice Manager, info@lbphysiotherapy.co.za)</a></p>
 											<p><a href="mailto:luyanda@lbphysiotherapy.co.za"><i class="fa fa-user-md" style="font-size:12px;margin-right:4px;"></i>luyanda@lbphysiotherapy.co.za</a> <span class="role-badge">(Physiotherapist)</span></p>
 										</div>
 									</div>
 
 									<p class="mt-auto pt-2"><a href="https://wa.me/27739480811" target="_blank" style="color:#25D366;font-weight:700;"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a></p>
+									<p class="mt-2"><a href="https://www.tiktok.com/@lbutheleziphysiotherapy?_r=1&amp;_t=ZS-9B5q4aeT4OF" target="_blank" rel="noopener noreferrer" style="font-weight:700;"><i class="fab fa-tiktok" style="margin-right:6px;"></i> @lbutheleziphysiotherapy</a></p>
 								</div>
 							</div>
 						</div>
@@ -289,6 +293,7 @@
 								<ul class="social">
 									<li><a href="https://www.instagram.com/lbutheleziphysio"><i class="icofont-instagram" ></i></a></li>
 									<li><a href="https://www.facebook.com/luyanda.buthelezi.773"><i class="icofont-facebook" ></i></a></li>
+									<li><a href="https://www.tiktok.com/@lbutheleziphysiotherapy?_r=1&amp;_t=ZS-9B5q4aeT4OF" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -325,9 +330,13 @@
 							<div class="single-footer">
 								<h2>Consultation</h2>
 								<p>Leave your details, we will reach out to you and get you the best help available at Luyanda Buthelezi Physiotherapy.</p>
-								<form action="mail/mail.php" method="post" target="_blank" class="newsletter-inner">
-									<input name="email" placeholder="Email Address" class="common-input" required="" type="email">
-									<button class="button" title="Send Email"><i class="icofont icofont-paper-plane"></i></button>
+								<form class="newsletter-inner footer-consultation-form">
+									<input name="name" placeholder="Your Name *" class="common-input" required type="text">
+									<input name="phone" placeholder="Your Phone *" class="common-input" required type="tel">
+									<div class="footer-input-btn-group">
+										<input name="email" placeholder="Email Address (optional)" class="common-input" type="email">
+										<button class="button" type="submit" title="Send Consultation Request" aria-label="Send Consultation Request"><i class="icofont icofont-paper-plane" aria-hidden="true"></i></button>
+									</div>
 								</form>
 							</div>
 						</div>
@@ -466,6 +475,90 @@
 				btn.setAttribute('aria-expanded', 'true');
 			}
 		}
+
+		// Main Contact Form Handler (without PHP) & URL query status handler
+		(function() {
+			var alertBox = document.getElementById('contactStatusAlert');
+			var errBox = document.getElementById('contactFormError');
+			var form = document.getElementById('mainContactForm');
+
+			// Read ?status=error or ?status=server_error from URL
+			try {
+				var params = new URLSearchParams(window.location.search);
+				var status = params.get('status');
+				if (status && alertBox) {
+					if (status === 'error') {
+						alertBox.style.display = 'block';
+						alertBox.style.background = '#fffaf0';
+						alertBox.style.border = '1px solid #feebc8';
+						alertBox.style.color = '#c05621';
+						alertBox.textContent = 'Please fill in your name and a valid email.';
+					} else if (status === 'server_error') {
+						alertBox.style.display = 'block';
+						alertBox.style.background = '#fff5f5';
+						alertBox.style.border = '1px solid #feb2b2';
+						alertBox.style.color = '#c53030';
+						alertBox.textContent = "Your message couldn't be sent. Please WhatsApp us on 073 948 0811.";
+					}
+				}
+			} catch (e) {}
+
+			if (form) {
+				form.addEventListener('submit', function(e) {
+					e.preventDefault();
+					if (errBox) {
+						errBox.style.display = 'none';
+						errBox.textContent = '';
+					}
+
+					var fd = new FormData(form);
+					var name = (fd.get('name') || '').trim();
+					var email = (fd.get('email') || '').trim();
+					var phone = (fd.get('phone') || '').trim();
+					var subject = (fd.get('subject') || '').trim();
+					var message = (fd.get('message') || '').trim();
+
+					if (!name || !email || !phone || !subject || !message) {
+						if (errBox) {
+							errBox.textContent = 'Please complete all required fields before sending.';
+							errBox.style.display = 'block';
+						}
+						return;
+					}
+
+					var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+					if (!emailRegex.test(email)) {
+						if (errBox) {
+							errBox.textContent = 'Please enter a valid email address.';
+							errBox.style.display = 'block';
+						}
+						return;
+					}
+
+					var btn = form.querySelector('button[type="submit"]');
+					if (btn) {
+						btn.disabled = true;
+						btn.textContent = 'Opening WhatsApp...';
+					}
+
+					var text = 'Hi LB Physiotherapy, I have an inquiry:\n' +
+						'Name: ' + name + '\n' +
+						'Email: ' + email + '\n' +
+						'Phone: ' + phone + '\n' +
+						'Subject: ' + subject + '\n' +
+						'Message: ' + message;
+
+					window.location.href = 'https://wa.me/27739480811?text=' + encodeURIComponent(text);
+
+					setTimeout(function() {
+						if (btn) {
+							btn.disabled = false;
+							btn.textContent = 'Send';
+						}
+					}, 4000);
+				});
+			}
+		})();
 		</script>
 </body>
 </html>

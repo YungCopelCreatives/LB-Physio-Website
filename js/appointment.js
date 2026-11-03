@@ -111,6 +111,36 @@
     }, 3000);
   });
 
+  // Footer Consultation Form
+  $(document).on('submit', '.footer-consultation-form, .newsletter-inner', function(event) {
+    event.preventDefault();
+    var form = this;
+    var submitBtn = form.querySelector('button[type="submit"], .button');
+    if (submitBtn && submitBtn.disabled) return;
+
+    var fd = new FormData(form);
+    var name = (fd.get('name') || '').trim();
+    var phone = (fd.get('phone') || '').trim();
+    var email = (fd.get('email') || '').trim();
+
+    if (!name || !phone) {
+      return;
+    }
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+    }
+
+    var text = 'Hi LB Physiotherapy, please contact me for a consultation. Name: ' + name + ' Phone: ' + phone + ' Email: ' + (email || 'Not provided');
+    window.location.href = 'https://wa.me/27739480811?text=' + encodeURIComponent(text);
+
+    setTimeout(function() {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+      }
+    }, 3000);
+  });
+
   /* =====================================
      Modal Datepicker
   =======================================*/
