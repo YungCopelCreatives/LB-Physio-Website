@@ -47,88 +47,309 @@
     <meta name="twitter:description" content="Get answers to common physiotherapy questions.">
 
     <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "Physiotherapy",
+      "@id": "https://www.lbphysiotherapy.co.za/#practice",
+      "name": "Luyanda Buthelezi Physiotherapy",
+      "alternateName": "LB Physiotherapy",
+      "url": "https://www.lbphysiotherapy.co.za/",
+      "logo": "https://www.lbphysiotherapy.co.za/img/logo.png",
+      "image": [
+        "https://www.lbphysiotherapy.co.za/img/slider.jpg",
+        "https://www.lbphysiotherapy.co.za/img/about.jpg"
+      ],
+      "description": "HPCSA-registered physiotherapy practice in Randburg (Johannesburg North), Gauteng, offering post-operative rehabilitation, sports injury treatment, and back, neck and headache management.",
+      "telephone": "+27739480811",
+      "email": "info@lbphysiotherapy.co.za",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "23 Market Street, Johannesburg North",
+        "addressLocality": "Randburg",
+        "addressRegion": "Gauteng",
+        "postalCode": "2188",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -26.0515298,
+        "longitude": 27.9767251
+      },
+      "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJzcY-4RF1lR4Rymzo7XLMvIE",
+      "openingHoursSpecification": [
         {
-          "@type": "MedicalBusiness",
-          "name": "Luyanda Buthelezi Physiotherapy",
-          "url": "https://www.lbphysiotherapy.co.za",
-          "telephone": "+27739480811",
-          "identifier": {
-            "@type": "PropertyValue",
-            "name": "Practice Number",
-            "value": "0720001171704"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "23 Market street",
-            "addressLocality": "Randburg",
-            "addressRegion": "Gauteng",
-            "postalCode": "2188",
-            "addressCountry": "ZA"
-          },
-          "openingHoursSpecification": [
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-              "opens": "08:00",
-              "closes": "18:00"
-            },
-            {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": "Saturday",
-              "opens": "08:00",
-              "closes": "14:00"
-            }
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
           ],
-          "sameAs": [
-            "https://www.instagram.com/lbutheleziphysio",
-            "https://www.facebook.com/luyanda.buthelezi.773",
-            "https://www.tiktok.com/@lbutheleziphysiotherapy"
-          ]
+          "opens": "08:00",
+          "closes": "18:00"
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What are your Practice Number and HPCSA registration details?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Luyanda Buthelezi Physiotherapy is registered with the Health Professions Council of South Africa (HPCSA License: PT 0154997) and the Board of Healthcare Funders (Practice Number: 0720001171704)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does Medical Aid claiming work?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We charge standard medical aid rates and assist patients with direct medical aid claiming and Prescribed Minimum Benefits (PMB) submissions across all major South African schemes (Discovery, GEMS, Bonitas, Medscheme, Momentum). We also accept card, cash, and EFT payments."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Do I need a medical referral to see a physiotherapist?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "As first-line healthcare practitioners, physiotherapists can assess and treat patients without a GP referral. However, if you are claiming through certain medical aid plans or PMB conditions, a doctor's referral letter may be beneficial."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What sports teams or clubs do you work with?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "LB Physiotherapy is the Official Physiotherapy Partner to The Wanderers Club and provides dedicated pitchside sports physiotherapy and rehabilitation for The Wanderers Chiefs rugby team."
-              }
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "08:00",
+          "closes": "14:00"
+        }
+      ],
+      "paymentAccepted": "Medical aid, Cash, Card, EFT",
+      "currenciesAccepted": "ZAR",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Physiotherapy services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Craniotomy and spinal post-operative rehabilitation"
             }
-          ]
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Hip, knee and shoulder replacement rehabilitation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Headache management"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Chronic back and neck pain treatment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sports injury rehabilitation"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Sports physiotherapy"
+            }
+          }
+        ]
+      },
+      "areaServed": [
+        {
+          "@type": "Place",
+          "name": "Randburg"
+        },
+        {
+          "@type": "Place",
+          "name": "Johannesburg North"
+        },
+        {
+          "@type": "Place",
+          "name": "Northriding"
+        },
+        {
+          "@type": "Place",
+          "name": "Olivedale"
+        },
+        {
+          "@type": "Place",
+          "name": "Randpark Ridge"
+        },
+        {
+          "@type": "Place",
+          "name": "Fairland"
+        },
+        {
+          "@type": "Place",
+          "name": "Bryanston"
+        },
+        {
+          "@type": "Place",
+          "name": "Fourways"
+        },
+        {
+          "@type": "Place",
+          "name": "Douglasdale"
+        },
+        {
+          "@type": "Place",
+          "name": "Johannesburg"
+        },
+        {
+          "@type": "Place",
+          "name": "Gauteng"
+        }
+      ],
+      "employee": {
+        "@id": "https://www.lbphysiotherapy.co.za/about#luyanda"
+      },
+      "founder": {
+        "@id": "https://www.lbphysiotherapy.co.za/about#luyanda"
+      },
+      "sameAs": [
+        "https://www.instagram.com/lbutheleziphysio",
+        "https://www.facebook.com/luyanda.buthelezi.773",
+        "https://www.tiktok.com/@lbutheleziphysiotherapy"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "name": "Practice Number",
+        "value": "0720001171704"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lbphysiotherapy.co.za/#website",
+      "url": "https://www.lbphysiotherapy.co.za/",
+      "name": "LB Physiotherapy",
+      "publisher": {
+        "@id": "https://www.lbphysiotherapy.co.za/#practice"
+      },
+      "inLanguage": "en-ZA"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are your Practice Number and HPCSA registration credentials?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LB Physiotherapy is fully accredited and registered with the Health Professions Council of South Africa ( HPCSA License: PT 0154997 ) and the Board of Healthcare Funders ( Practice Number: 0720001171704 ). All sessions can be claimed through South African medical aids."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does Medical Aid claiming work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We charge standard medical aid rates and can assist with direct medical aid claims and Prescribed Minimum Benefits (PMB) submissions across all major schemes including Discovery Health, GEMS, Bonitas, Medscheme, Momentum, and Bestmed. We also accept card, cash, and EFT payments."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What sports clubs and teams are you affiliated with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are the Official Physiotherapy Partner to The Wanderers Club and provide matchday physiotherapy and acute sports rehabilitation for The Wanderers Chiefs Rugby Team , alongside treating school and amateur athletes across Gauteng."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does your treatment process work from start to finish?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We follow a structured 4-step rehabilitation process: (1) Comprehensive Clinical Assessment, (2) Root-Cause Diagnosis & Goal Setting, (3) Evidence-Based Treatment & Manual Therapy, and (4) Progressive Rehabilitation & Prevention. Learn more about our 4-Step Process →"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a medical referral to see a physiotherapist?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No doctor referral is required for private appointments as physiotherapists are first-line primary practitioners in South Africa. If claiming through specific hospital plans or PMB conditions, a doctor's referral letter can be helpful."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I bring to my first appointment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Please bring: valid ID, medical referral (if you have one), medical aid card and details, any recent imaging (X-rays, scans), and a list of any medications you take. Wearing comfortable, loose clothing is recommended."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long is each physiotherapy session?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard sessions are 30-45 minutes, depending on your condition and treatment plan. Your first assessment may take longer to ensure we gather all necessary information and develop a personalized recovery plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many sessions will I need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The number of sessions depends on your condition, severity, and recovery goals. After your initial assessment, we'll discuss a recommended treatment plan tailored to your needs. Some conditions improve in a few weeks, while others may require ongoing support."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your cancellation policy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We ask for 24 hours' notice for cancellations. If you need to reschedule, please contact us as soon as possible via WhatsApp or phone. Last-minute cancellations may incur a fee."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you treat children?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide specialized pediatric physiotherapy for children and adolescents, including developmental movement milestones, posture correction, sports injuries, and post-surgical care."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I book an appointment online or via WhatsApp?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! You can book through our website appointment page or message us directly on WhatsApp at +27 73 948 0811 for instant confirmation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your practice operating hours?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are open Monday to Friday from 08:00 to 18:00 and Saturday mornings from 08:00 to 14:00 (Sunday closed). This extended schedule offers convenient morning, afternoon, and evening appointment slots for working professionals, school learners, and competitive athletes."
+          }
+        }
+      ],
+      "url": "https://www.lbphysiotherapy.co.za/faq",
+      "isPartOf": {
+        "@id": "https://www.lbphysiotherapy.co.za/#website"
+      },
+      "about": {
+        "@id": "https://www.lbphysiotherapy.co.za/#practice"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lbphysiotherapy.co.za/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQ",
+          "item": "https://www.lbphysiotherapy.co.za/faq"
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
 	<a href="#main-content" class="skip-to-content">Skip to content</a>
