@@ -7,7 +7,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Legacy reveal selectors — individual elements that fade in
   const revealSelectors = '.section-title, .service-item, .single-service, .single-table, .about-img, .about-content, .faq-item, .portfolio-item, .single-pf, .value-card, .partnership-header, .partnership-hero, .partnership-strip, .cta-section, .choose-left, .choose-right';
-  document.querySelectorAll(revealSelectors).forEach(el => el.classList.add('lb-reveal'));
+  // Skip items inside carousels: Owl clones slides, and hidden clones would show as blank slides
+  document.querySelectorAll(revealSelectors).forEach(el => {
+    if (!el.closest('.owl-carousel')) el.classList.add('lb-reveal');
+  });
 
   // Stagger containers — only purpose-built classes, no generic Bootstrap grid classes
   document.querySelectorAll('.stagger-grid, .partnership-grid').forEach(el => {

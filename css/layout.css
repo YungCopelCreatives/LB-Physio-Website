@@ -43,13 +43,10 @@
   opacity: 1;
   transform: translateY(0);
 }
+/* Sticky: slide the topbar away with transform only (no layout shift / CLS) */
 .header.sticky .topbar {
-  max-height: 0;
-  padding: 0;
-  overflow: hidden;
   opacity: 0;
   transform: translateY(-100%);
-  border-bottom: none;
   pointer-events: none;
 }
 .header .top-link {
@@ -122,8 +119,8 @@
 }
 
 .header.sticky .header-inner {
-  height: 62px;
-  margin-top: 10px;
+  /* move up into the topbar's space with transform (no layout shift) */
+  transform: translateY(calc(-1 * var(--topbar-h, 0px)));
   background: rgba(255, 255, 255, 0.97);
   box-shadow: 0 14px 38px -4px rgba(15, 23, 42, 0.12), 0 4px 16px -2px rgba(37, 138, 167, 0.10);
   border-color: rgba(37, 138, 167, 0.16);

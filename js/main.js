@@ -11,6 +11,9 @@
     =======================================*/
     function checkStickyHeader() {
       var currentScroll = $(window).scrollTop() || $(document).scrollTop() || 0;
+      var topbar = document.querySelector('.header .topbar');
+      var header = document.querySelector('.header');
+      if (header) header.style.setProperty('--topbar-h', (topbar ? topbar.offsetHeight : 0) + 'px');
       if (currentScroll > 30) {
         $('.header').addClass("sticky");
       } else {
