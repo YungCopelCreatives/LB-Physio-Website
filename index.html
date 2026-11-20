@@ -273,6 +273,8 @@
   ]
 }
 </script>
+    <link rel="stylesheet" href="css/flatpickr.min.css?v=2.6">
+    <link rel="stylesheet" href="css/forms.css?v=2.6">
 </head>
     <body>
 	<a href="#main-content" class="skip-to-content">Skip to content</a>
@@ -948,7 +950,7 @@
 										</div>
 										<div class="col-lg-6 col-md-6 col-12">
 											<div class="form-group">
-												<select name="service" required>
+												<select name="service" aria-label="Service" required>
 													<option value="" disabled selected>Select Service</option>
 													<option value="Physiotherapy">Physiotherapy</option>
 													<option value="Rehabilitation">Rehabilitation</option>
@@ -970,7 +972,7 @@
 										</div>
 									</div>
 									<button type="submit" class="btn btn-appointment-submit">Book An Appointment</button>
-									<p class="appointment-note">We will confirm your appointment via WhatsApp.</p>
+									<p class="appointment-note">Our practice manager will contact you to confirm your appointment.</p>
 								</form>
 							</div>
 						</div>
@@ -1001,7 +1003,7 @@
 							<input type="tel" name="phone" placeholder="Phone Number*" required>
 						</div>
 						<div class="form-group">
-							<select name="service" required>
+							<select name="service" aria-label="Service" required>
 								<option value="" disabled selected>Select Treatment Type</option>
 								<option value="Pediatric Physiotherapy">Pediatric Care</option>
 								<option value="Sports Injury Rehabilitation">Sports Injury Recovery</option>
@@ -1021,7 +1023,7 @@
 						<textarea name="message" rows="4" placeholder="Tell us about your specific needs*"></textarea>
 					</div>
 					<button type="submit" class="btn-submit">Request Appointment <i class="fa fa-arrow-right ml-2"></i></button>
-					<p class="form-note">We will confirm your appointment via WhatsApp.</p>
+					<p class="form-note">Our practice manager will contact you to confirm your appointment.</p>
 				</form>
 			</div>
 		</div>
@@ -1125,25 +1127,11 @@
 		<!-- LB Physiotherapy JS -->
 		<script src="js/main.js?v=2.5"></script>
 		<script src="js/navigation.js?v=2.5"></script>
-		<script src="js/appointment.js?v=2.5"></script>
+		<script src="js/flatpickr.min.js?v=2.6"></script>
+		<script src="js/appointment.js?v=2.6"></script>
 		<script src="js/scripts.js?v=2.5"></script>
 		<script src="js/animations.js?v=2.5"></script>
 
-		<script>
-			// Home page WhatsApp form submission
-			document.getElementById('homeAppointmentForm').addEventListener('submit', function(event) {
-				event.preventDefault();
-				var fd = new FormData(this);
-				var msg = 'Appointment Request:\n' +
-					'Name: ' + fd.get('name') + '\n' +
-					'Email: ' + fd.get('email') + '\n' +
-					'Phone: ' + fd.get('phone') + '\n' +
-					'Service: ' + fd.get('service') + '\n' +
-					'Date: ' + fd.get('date') + '\n' +
-					'Message: ' + fd.get('message');
-				window.location.href = 'https://wa.me/27739480811?text=' + encodeURIComponent(msg);
-			});
-		</script>
 
 		<!-- Partnership Bottom Announcement Bar (Homepage only) -->
 		<div class="partnership-bottom-bar" id="partnershipBottomBar">

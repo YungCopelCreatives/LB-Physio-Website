@@ -33,125 +33,159 @@
   });
 
   /* =====================================
-     WhatsApp Form Submission
-     — Double-submit prevention
-     — Standardized professional WhatsApp template
+     Email Form Submission (mail/mail.php)
+     — Appointment, contact and call-back forms
+     — Sent to the Practice Manager as a branded email
+     — Double-submit prevention, inline errors, WhatsApp fallback
   =======================================*/
-  function formatWhatsAppAppointment(data) {
-    return '*New Appointment Request - LB Physiotherapy*\n' +
-      '------------------------------------\n' +
-      '• *Patient Name:* ' + (data.name || 'Not provided') + '\n' +
-      '• *Phone:* ' + (data.phone || 'Not provided') + '\n' +
-      (data.email ? '• *Email:* ' + data.email + '\n' : '') +
-      '• *Service / Condition:* ' + (data.service || 'General Assessment') + '\n' +
-      '• *Preferred Date:* ' + (data.date || 'Earliest Available') + '\n' +
-      (data.time ? '• *Preferred Time:* ' + data.time + '\n' : '') +
-      (data.message ? '• *Notes / Symptoms:* ' + data.message + '\n' : '') +
-      '------------------------------------\n' +
-      '_Practice No: 0720001171704 | HPCSA: PT 0154997_';
+  var MAIL_ENDPOINT = '/mail/mail.php';
+  var WHATSAPP_URL = 'https://wa.me/27739480811';
+
+  var FORMS = [
+    { selector: '#modalAppointmentForm', type: 'appointment' },
+    { selector: '#homeAppointmentForm', type: 'appointment' },
+    { selector: '#appointmentForm', type: 'appointment', page: 'appointment' },
+    { selector: '#mainContactForm', type: 'contact' },
+    { selector: '.footer-consultation-form', type: 'callback' }
+  ];
+
+  function formMessageBox(form) {
+    var box = form.querySelector('.form-mail-status');
+    if (!box) {
+      box = document.createElement('div');
+      box.className = 'form-mail-status';
+      box.setAttribute('role', 'alert');
+      box.setAttribute('aria-live', 'polite');
+      form.appendChild(box);
+    }
+    return box;
   }
 
-  // Modal Appointment Form
-  $(document).on('submit', '#modalAppointmentForm', function(event) {
-    event.preventDefault();
-    var form = this;
-    var submitBtn = form.querySelector('.btn-submit');
-    if (submitBtn && submitBtn.disabled) return;
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Redirecting to WhatsApp...';
-    }
-    var fd = new FormData(form);
-    var data = {
-      name: fd.get('name'),
-      email: fd.get('email'),
-      phone: fd.get('phone'),
-      service: fd.get('service'),
-      date: fd.get('date'),
-      time: fd.get('time'),
-      message: fd.get('message')
-    };
-    var msg = formatWhatsAppAppointment(data);
-    window.location.href = 'https://wa.me/27739480811?text=' + encodeURIComponent(msg);
-    setTimeout(function() {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Request Appointment';
-      }
-    }, 3000);
-  });
+  function showFormError(form, text) {
+    var box = formMessageBox(form);
+    box.innerHTML = '';
+    var p = document.createElement('span');
+    p.textContent = text + ' ';
+    var a = document.createElement('a');
+    a.href = WHATSAPP_URL;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.textContent = 'WhatsApp us instead';
+    box.appendChild(p);
+    box.appendChild(a);
+    box.style.display = 'block';
+  }
 
-  // Homepage Appointment Form
-  $(document).on('submit', '#homeAppointmentForm', function(event) {
-    event.preventDefault();
-    var form = this;
-    var submitBtn = form.querySelector('button[type="submit"]');
-    if (submitBtn && submitBtn.disabled) return;
-    if (submitBtn) {
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Redirecting to WhatsApp...';
-    }
-    var fd = new FormData(form);
-    var data = {
-      name: fd.get('name'),
-      email: fd.get('email'),
-      phone: fd.get('phone'),
-      service: fd.get('service'),
-      date: fd.get('date'),
-      time: fd.get('time'),
-      message: fd.get('message')
-    };
-    var msg = formatWhatsAppAppointment(data);
-    window.location.href = 'https://wa.me/27739480811?text=' + encodeURIComponent(msg);
-    setTimeout(function() {
-      if (submitBtn) {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Book An Appointment';
-      }
-    }, 3000);
-  });
+  function clearFormError(form) {
+    var box = form.querySelector('.form-mail-status');
+    if (box) { box.style.display = 'none'; box.innerHTML = ''; }
+  }
 
-  // Footer Consultation Form
-  $(document).on('submit', '.footer-consultation-form, .newsletter-inner', function(event) {
-    event.preventDefault();
-    var form = this;
-    var submitBtn = form.querySelector('button[type="submit"], .button');
-    if (submitBtn && submitBtn.disabled) return;
+  function addHoneypot(form) {
+    if (form.querySelector('input[name="website"]')) return;
+    var hp = document.createElement('input');
+    hp.type = 'text';
+    hp.name = 'website';
+    hp.tabIndex = -1;
+    hp.autocomplete = 'off';
+    hp.setAttribute('aria-hidden', 'true');
+    hp.className = 'form-hp-field';
+    form.appendChild(hp);
+  }
 
-    var fd = new FormData(form);
-    var name = (fd.get('name') || '').trim();
-    var phone = (fd.get('phone') || '').trim();
-    var email = (fd.get('email') || '').trim();
+  function submitToMail(form, cfg) {
+    var btn = form.querySelector('button[type="submit"], .btn-submit, .button');
+    if (btn && btn.disabled) return;
+    clearFormError(form);
 
-    if (!name || !phone) {
+    // Date must be picked from the calendar
+    var dateInput = form.querySelector('input[name="date"]');
+    if (cfg.type === 'appointment' && dateInput && !dateInput.value) {
+      showFormError(form, 'Please choose a preferred date from the calendar.');
+      if (dateInput._flatpickr) dateInput._flatpickr.open();
       return;
     }
 
-    if (submitBtn) {
-      submitBtn.disabled = true;
+    var fd = new FormData(form);
+    fd.set('form_type', cfg.type);
+    if (cfg.page) fd.set('page', cfg.page);
+
+    var original = btn ? btn.innerHTML : '';
+    if (btn) {
+      btn.disabled = true;
+      if (!btn.classList.contains('button')) btn.textContent = 'Sending...';
     }
 
-    var text = 'Hi LB Physiotherapy, please contact me for a consultation. Name: ' + name + ' Phone: ' + phone + ' Email: ' + (email || 'Not provided');
-    window.location.href = 'https://wa.me/27739480811?text=' + encodeURIComponent(text);
-
-    setTimeout(function() {
-      if (submitBtn) {
-        submitBtn.disabled = false;
+    fetch(MAIL_ENDPOINT, {
+      method: 'POST',
+      body: fd,
+      headers: { 'Accept': 'application/json', 'X-Requested-With': 'XMLHttpRequest' },
+      credentials: 'same-origin'
+    }).then(function(res) {
+      return res.json().catch(function() { return { ok: false }; });
+    }).then(function(data) {
+      if (data && data.ok) {
+        window.location.href = data.redirect || '/mail-success';
+        return;
       }
-    }, 3000);
+      showFormError(form, (data && data.message) || "Sorry, your message couldn't be sent.");
+      if (btn) { btn.disabled = false; btn.innerHTML = original; }
+    }).catch(function() {
+      showFormError(form, "Sorry, your message couldn't be sent. Please check your connection.");
+      if (btn) { btn.disabled = false; btn.innerHTML = original; }
+    });
+  }
+
+  FORMS.forEach(function(cfg) {
+    $(document).on('submit', cfg.selector, function(event) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      submitToMail(this, cfg);
+    });
   });
 
   /* =====================================
-     Modal Datepicker
+     Preferred Date — calendar pick only
+     — No past dates, Sundays closed, up to 3 months ahead
+     — Patients see "Saturday, 28 November 2026"; the form sends 2026-11-28
   =======================================*/
+  function initDatePickers() {
+    if (typeof window.flatpickr !== 'function') return;
+    var fields = document.querySelectorAll('#datepicker, #modalDatepicker, #app_date, input.js-date-pick');
+    Array.prototype.forEach.call(fields, function(input) {
+      if (input._flatpickr) return;
+      input.setAttribute('type', 'text');
+      var placeholder = input.getAttribute('placeholder') || 'Select a date';
+      window.flatpickr(input, {
+        dateFormat: 'Y-m-d',
+        altInput: true,
+        altFormat: 'l, j F Y',
+        minDate: 'today',
+        maxDate: new Date().fp_incr ? new Date().fp_incr(90) : null,
+        disable: [function(date) { return date.getDay() === 0; }],
+        locale: { firstDayOfWeek: 1 },
+        disableMobile: true,
+        onReady: function(sel, str, fp) {
+          if (fp.altInput) {
+            fp.altInput.setAttribute('placeholder', placeholder);
+            fp.altInput.setAttribute('aria-label', 'Preferred date (choose from calendar)');
+            fp.altInput.setAttribute('readonly', 'readonly');
+            fp.altInput.classList.add('date-pick-input');
+          }
+        },
+        onChange: function(sel, str, fp) {
+          var form = fp.input.form;
+          if (form && str) clearFormError(form);
+        }
+      });
+    });
+  }
+
   $(function() {
-    if ($.fn.datepicker) {
-      $('#modalDatepicker').datepicker({
-        dateFormat: 'DD, MM d, yy',
-        minDate: 0,
-        beforeShowDay: $.datepicker.noWeekends
-      }).attr('readonly', 'readonly');
-    }
+    FORMS.forEach(function(cfg) {
+      Array.prototype.forEach.call(document.querySelectorAll(cfg.selector), addHoneypot);
+    });
+    initDatePickers();
   });
 
   /* =====================================
