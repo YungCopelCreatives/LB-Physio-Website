@@ -236,6 +236,8 @@
   ]
 }
 </script>
+    <link rel="stylesheet" href="css/flatpickr.min.css?v=2.6">
+    <link rel="stylesheet" href="css/forms.css?v=2.6">
 </head>
     <body>
 	<a href="#main-content" class="skip-to-content">Skip to content</a>
@@ -585,7 +587,7 @@
 							<input type="tel" name="phone" placeholder="Phone Number*" required>
 						</div>
 						<div class="form-group">
-							<select name="service" required>
+							<select name="service" aria-label="Service" required>
 								<option value="" disabled selected>Select Treatment Type</option>
 								<option value="Sports Physiotherapy">Sports Physiotherapy</option>
 								<option value="Post-Operative Rehabilitation">Post-Surgery Rehab</option>
@@ -600,7 +602,7 @@
 						<textarea name="message" rows="4" placeholder="Tell us about your specific needs*"></textarea>
 					</div>
 					<button type="submit" class="btn-submit">Request Appointment <i class="fa fa-arrow-right ml-2"></i></button>
-					<p class="form-note">We will confirm your appointment via WhatsApp.</p>
+					<p class="form-note">Our practice manager will contact you to confirm your appointment.</p>
 				</form>
 			</div>
 		</div>
@@ -613,7 +615,8 @@
 		<script src="js/owl-carousel.js?v=2.5"></script>
 		<script src="js/main.js?v=2.5"></script>
 		<script src="js/navigation.js?v=2.5"></script>
-		<script src="js/appointment.js?v=2.5"></script>
+		<script src="js/flatpickr.min.js?v=2.6"></script>
+		<script src="js/appointment.js?v=2.6"></script>
 		<script src="js/animations.js?v=2.5"></script>
 
 		<script>
@@ -684,7 +687,7 @@
 			}
 		}
 
-		// Main Contact Form Handler (without PHP) & URL query status handler
+		// Contact form status messages (?status=error / server_error). Sending is handled in js/appointment.js
 		(function() {
 			var alertBox = document.getElementById('contactStatusAlert');
 			var errBox = document.getElementById('contactFormError');
@@ -711,61 +714,6 @@
 				}
 			} catch (e) {}
 
-			if (form) {
-				form.addEventListener('submit', function(e) {
-					e.preventDefault();
-					if (errBox) {
-						errBox.style.display = 'none';
-						errBox.textContent = '';
-					}
-
-					var fd = new FormData(form);
-					var name = (fd.get('name') || '').trim();
-					var email = (fd.get('email') || '').trim();
-					var phone = (fd.get('phone') || '').trim();
-					var subject = (fd.get('subject') || '').trim();
-					var message = (fd.get('message') || '').trim();
-
-					if (!name || !email || !phone || !subject || !message) {
-						if (errBox) {
-							errBox.textContent = 'Please complete all required fields before sending.';
-							errBox.style.display = 'block';
-						}
-						return;
-					}
-
-					var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-					if (!emailRegex.test(email)) {
-						if (errBox) {
-							errBox.textContent = 'Please enter a valid email address.';
-							errBox.style.display = 'block';
-						}
-						return;
-					}
-
-					var btn = form.querySelector('button[type="submit"]');
-					if (btn) {
-						btn.disabled = true;
-						btn.textContent = 'Opening WhatsApp...';
-					}
-
-					var text = 'Hi LB Physiotherapy, I have an inquiry:\n' +
-						'Name: ' + name + '\n' +
-						'Email: ' + email + '\n' +
-						'Phone: ' + phone + '\n' +
-						'Subject: ' + subject + '\n' +
-						'Message: ' + message;
-
-					window.location.href = 'https://wa.me/27739480811?text=' + encodeURIComponent(text);
-
-					setTimeout(function() {
-						if (btn) {
-							btn.disabled = false;
-							btn.textContent = 'Send';
-						}
-					}, 4000);
-				});
-			}
 		})();
 		</script>
 </body>

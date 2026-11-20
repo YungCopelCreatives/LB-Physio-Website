@@ -129,9 +129,7 @@
     /* =====================================
        Date Picker
     =======================================*/
-    if ($.fn.datepicker && $("#datepicker").length) {
-      $("#datepicker").datepicker();
-    }
+    // Date pickers are set up in js/appointment.js (flatpickr calendar)
 
     /* =====================================
        Floating WhatsApp Action Widget

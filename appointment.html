@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="keywords" content="Physiotherapy Johannesburg, Book Physio Online, Rehabilitation Services, Sports Injury Recovery, Northriding, Randburg">
-    <meta name="description" content="Book a physio appointment with HPCSA-registered physiotherapist Luyanda Buthelezi in Randburg. Medical aid accepted. Quick WhatsApp booking.">
+    <meta name="description" content="Book a physio appointment with HPCSA-registered physiotherapist Luyanda Buthelezi in Randburg. Medical aid accepted. Quick online booking.">
     <meta name="author" content="Luyanda Buthelezi Physiotherapy">
     <meta name="geo.region" content="ZA-GP">
     <meta name="geo.placename" content="Johannesburg">
@@ -125,7 +125,7 @@
         }
 
         .btn-whatsapp-book {
-            background: #25D366;
+            background: #258AA7;
             color: #ffffff !important;
             font-weight: 700;
             font-size: 1.05rem;
@@ -138,13 +138,13 @@
             justify-content: center;
             gap: 10px;
             transition: all 0.3s ease;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.25);
+            box-shadow: 0 6px 20px rgba(37, 138, 167, 0.25);
         }
 
         .btn-whatsapp-book:hover {
-            background: #20BA5A;
+            background: #1A6F8C;
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35);
+            box-shadow: 0 8px 24px rgba(37, 138, 167, 0.35);
         }
 
         .info-sidebar-box {
@@ -390,6 +390,8 @@
   ]
 }
 </script>
+    <link rel="stylesheet" href="css/flatpickr.min.css?v=2.6">
+    <link rel="stylesheet" href="css/forms.css?v=2.6">
 </head>
 <body>
 	<a href="#main-content" class="skip-to-content">Skip to content</a>
@@ -532,7 +534,7 @@
                         <span class="credential-pill"><i class="fa fa-file-medical"></i> Medical Aid Rates Claimable</span>
                     </div>
                     <h1 class="mb-2">Book Your Physiotherapy Session</h1>
-                    <p class="text-muted">Direct WhatsApp booking with Luyanda Buthelezi Physiotherapy in Northriding, Randburg.</p>
+                    <p class="text-muted">Book online with Luyanda Buthelezi Physiotherapy in Northriding, Randburg.</p>
                 </div>
             </div>
 
@@ -614,9 +616,9 @@
 
                             <div class="text-center mt-4">
                                 <button type="submit" class="btn-whatsapp-book">
-                                    <i class="fab fa-whatsapp fa-lg"></i> Send Appointment Request via WhatsApp
+                                    <i class="fa fa-calendar-check-o fa-lg"></i> Send Appointment Request
                                 </button>
-                                <p class="text-muted small mt-2">We will immediately confirm your booking slot via WhatsApp.</p>
+                                <p class="text-muted small mt-2">Your request goes straight to our practice manager, who will contact you to confirm your slot.</p>
                             </div>
                         </form>
                     </div>
@@ -727,41 +729,12 @@
 
     <!-- Scripts -->
     <script src="js/jquery.min.js?v=2.5"></script>
+    <script src="js/popper.min.js?v=2.5"></script>
     <script src="js/bootstrap.min.js?v=2.5"></script>
     <script src="js/main.js?v=2.5"></script>
     <script src="js/navigation.js?v=2.5"></script>
-    <script src="js/appointment.js?v=2.5"></script>
+    <script src="js/flatpickr.min.js?v=2.6"></script>
+    <script src="js/appointment.js?v=2.6"></script>
     <script src="js/animations.js?v=2.5"></script>
-
-    <script>
-        // WhatsApp Redirection
-        document.getElementById('appointmentForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const name = this.name.value.trim();
-            const phone = this.phone.value.trim();
-            const email = this.email.value.trim();
-            const service = this.service.value;
-            const date = this.date.value;
-            const time = this.time ? this.time.value : '';
-            const message = this.message.value.trim();
-
-            const whatsappMessage = 
-                `*New Appointment Request - LB Physiotherapy*\n` +
-                `------------------------------------\n` +
-                `• *Patient Name:* ${name}\n` +
-                `• *Phone:* ${phone}\n` +
-                (email ? `• *Email:* ${email}\n` : '') +
-                `• *Service:* ${service}\n` +
-                `• *Preferred Date:* ${date}\n` +
-                (time ? `• *Preferred Time:* ${time}\n` : '') +
-                (message ? `• *Notes / Symptoms:* ${message}\n` : '') +
-                `------------------------------------\n` +
-                `_Practice No: 0720001171704 | HPCSA: PT 0154997_`;
-
-            const whatsappURL = `https://wa.me/27739480811?text=${encodeURIComponent(whatsappMessage)}`;
-            window.location.href = whatsappURL;
-        });
-    </script>
 </body>
 </html>
