@@ -67,10 +67,6 @@
     align-items: center !important;
     justify-content: space-between !important;
   }
-  .header.sticky .header-inner {
-    height: 56px !important;
-    margin-top: 8px !important;
-  }
   .header .header-inner .container,
   .header .header-inner .inner {
     width: 100% !important;
@@ -463,10 +459,6 @@
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-  }
-  .header.sticky .header-inner {
-    height: 54px !important;
-    margin-top: 8px !important;
   }
   .header .header-inner .container,
   .header .header-inner .inner {
